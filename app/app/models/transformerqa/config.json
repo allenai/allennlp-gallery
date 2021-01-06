@@ -1,0 +1,38 @@
+{
+  "title": "TransformerQA",
+  "authors": [
+    {
+      "name": "Dirk Groeneveld",
+      "twitter": "@mechanicaldirk",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "email": "dirkg@allenai.org",
+      "s2_author_page": "https://www.semanticscholar.org/author/Dirk-Groeneveld/3458736",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=KEhvGNMAAAAJ"
+    }, {
+      "name": "Akshita Bhagia",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "email": "akshitab@allenai.org"
+    }, {
+      "name": "Pete Walsh",
+      "twitter": "@epwalsh10",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "email": "petew@allenai.org"
+    }
+  ],
+  "submission_date": "2021-01-06",
+  "github_link": "https://github.com/allenai/allennlp-models/blob/main/allennlp_models/rc/models/transformer_qa.py",
+  "demo_link": "https://demo.allennlp.org/reading-comprehension",
+  "paper_link": "https://api.semanticscholar.org/CorpusID:52967399",
+  "allennlp_version": "1.3",
+  "supported_languages": ["en"],
+  "datasets": [
+    {
+      "name": "SQuAD 1.1",
+      "link": "https://rajpurkar.github.io/SQuAD-explorer/explore/1.1/dev/"
+    }, {
+      "name": "SQuAD 2.0",
+      "link": "https://rajpurkar.github.io/SQuAD-explorer/explore/v2.0/dev/"
+    }
+  ],
+  "tags": ["squad", "transformer", "qa", "reading comprehension", "question answering"]
+}
