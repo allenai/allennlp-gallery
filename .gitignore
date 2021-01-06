@@ -4,3 +4,4 @@ __pycache__
 
 # Kubernetes configuration
 .skiff/webapp.yaml
+/*.iml
