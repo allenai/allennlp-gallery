@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Skiff Python Template{% endblock %}
+
+{% block content %}
+
+<h1>Home</h1>
+
+<form method="GET" action="{{ url_for("app.index") }}">
+    <div class="form-row">
+        <label for="question">Question:</label>
+        <textarea name="question"
+                  id="question"
+                  placeholder="Enter a question">{{ query.get("question", "") }}</textarea>
+    </div>
+    <div>
+        <label for="choice-1">Answer 1:</label>
+        <input type="text"
+               name="choice-1"
+               id="choice-1"
+               placeholder="Enter the first answer"
+               value="{{ query.get("choice-1", "") }}">
+    </div>
+    <div>
+        <label for="choice-2">Answer 2:</label>
+        <input type="text"
+               name="choice-2"
+               id="choice-2"
+               placeholder="Enter the second answer"
+               value="{{ query.get("choice-2", "") }}">
+    </div>
+    <div class="form-row">
+        <input type="submit" value="Submit" />
+    </div>
+</form>
+
+{% if answer != None: %}
+    <h2>Our system answered:</h2>
+    <strong>{{ answer.get("answer", "") }}</strong> ({{ answer.get("score", 0) }}% confidence)
+{% endif %}
+{% endblock %}

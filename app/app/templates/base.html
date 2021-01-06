@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@allenai/varnish@2.0.7/dist/shellac.min.css">
+        <link rel="stylesheet" href="{{ url_for("static", filename="main.css") }}">
+        <link rel="icon" href="{{ url_for("static", filename="favicon.ico") }}">
+    </head>
+    <body>
+        <header>
+            <div class="banner">
+                <div class="content">
+                    <a href="https://allenai.org">
+                        <img src="https://cdn.jsdelivr.net/npm/@allenai/varnish@2.0.7/dist/ai2.svg"
+                             alt="Allen Institute for AI">
+                    </a>
+                </div>
+            </div>
+            <div class="content header-columns">
+                <div class="logo">
+                    <a href="{{  url_for("app.index") }}">
+                        <img src="{{ url_for("static", filename="skiff.png") }}"
+                             width="50" height="50" alt="Skiff">
+                    </a>
+                    <h2 class="header-title">Skiff Python Template</h2>
+                </div>
+                <nav>
+                    <a href="{{ url_for("app.index") }}" class="no-wrap">Home</a>
+                    <a href="{{ url_for("app.about") }}" class="no-wrap">About</a>
+                </nav>
+            </div>
+        </header>
+        <div class="bg-white">
+            <main>
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+        <footer>
+            <div class="content text-center">
+                &copy; <a href="https://allenai.org">The Allen Institute for Artificial Intelligence (AI2)</a> - All Rights Reserved
+                | <a href="https://allenai.org/privacy-policy.html">Privacy Policy</a>
+                | <a href="https://allenai.org/terms.html">Terms of Use</a>
+            </div>
+        </footer>
+        <script src="https://stats.allenai.org/init.min.js" async></script>
+    </body>
+</html>

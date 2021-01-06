@@ -1,0 +1,93 @@
+/**
+ * TODO: Most of this should be ported to shellac.
+ */
+
+/* Global */
+
+    html {
+        background: var(--color-n2);
+    }
+
+    .bg-white {
+        background: #fff;
+    }
+
+/* Typography */
+
+    /* Remove the default margin on headers, when they're the first header
+       on a page. */
+    main > *:first-child,
+    main > section > *:first-child {
+        margin-top: 0;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .no-wrap {
+        white-space: nowrap;
+    }
+
+/* Header */
+
+    header {
+        box-shadow: rgba(10, 41, 57, 0.08) 0px 4px 16px;
+        position: relative;
+        z-index: 1;
+    }
+
+    header > .content {
+        display: grid;
+        grid-template-columns: 1fr min-content min-content;
+        grid-gap: var(--spacing-xl);
+        align-items: center;
+        padding-top: var(--spacing-sm);
+        padding-bottom: var(--spacing-sm);
+    }
+
+    header > .content,
+    .banner > .content {
+        overflow: hidden;
+    }
+
+    header h3 {
+        margin: 0;
+    }
+
+    .logo {
+        display: grid;
+        align-items: center;
+        grid-template-columns: min-content auto;
+        grid-gap: var(--spacing-md);
+    }
+
+    .logo a[href],
+    .logo a[href]:visited,
+    .logo a[href]:active,
+    .logo a[href]:hover {
+        color: var(--palette-text-default);
+        text-decoration: none;
+    }
+
+/* Navigation and Sections */
+
+    section,
+    nav {
+        margin: var(--spacing-lg) 0;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
+    nav > a {
+        margin-right: var(--spacing-lg);
+    }
+
+    nav > a:last-child {
+        margin-right: 0;
+    }
+
+
