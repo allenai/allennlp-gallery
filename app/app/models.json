@@ -8,7 +8,7 @@
         "affiliation": "Allen Institute for Artificial Intelligence",
         "email": "dirkg@allenai.org",
         "s2_author_page": "https://www.semanticscholar.org/author/Dirk-Groeneveld/3458736",
-        "google_scholar_author_page": "https://scholar.google.com/citations?user=KEhvGNMAAAAJ&hl=en&oi=ao"
+        "google_scholar_author_page": "https://scholar.google.com/citations?user=KEhvGNMAAAAJ"
       }, {
         "name": "Akshita Bhagia",
         "affiliation": "Allen Institute for Artificial Intelligence",
@@ -43,15 +43,23 @@
       {
         "name": "Shih-Ting Lin",
         "email": "j0717lin@cs.utexas.edu",
-        "affiliation": "The University of Texas at Austin"
+        "affiliation": "The University of Texas at Austin",
+        "google_scholar_author_page": "https://scholar.google.com/citations?user=a65Vh0QAAAAJ",
+        "s2_author_page": "https://www.semanticscholar.org/author/Shih-ting-Lin/1750926168"
       }, {
         "name": "Nathanael Chambers",
+        "twitter": "@NateChambers",
         "email": "nchamber@usna.edu",
-        "affiliation": "United States Naval Academy"
+        "affiliation": "United States Naval Academy",
+        "google_scholar_author_page": "https://scholar.google.com/citations?user=9ZRcemUAAAAJ",
+        "s2_author_page": "https://www.semanticscholar.org/author/N.-Chambers/35170013"
       }, {
         "name": "Greg Durrett",
         "email": "gdurrett@cs.utexas.edu",
-        "affiliation": "The University of Texas at Austin"
+        "affiliation": "The University of Texas at Austin",
+        "google_scholar_author_page": "https://scholar.google.com/citations?user=EpQ_sDEAAAAJ",
+        "twitter": "@gregd_nlp",
+        "s2_author_page": "https://www.semanticscholar.org/author/Greg-Durrett/1814094"
       }
     ],
     "submission_date": "2021-01-10",
