@@ -13,19 +13,7 @@ installed on your local machine.
 
 ## Getting Started
 
-Start by opening `skiff.json` and updating the `appName`, `contact` and
-`team` fields:
-
-* The `appName` field should be a short, unique and url-safe identifier for
-  your application. This value determines the url of your application, which
-  will be `${appName}.apps.allenai.org`.
-* The `contact` field should be the `@allenai.org` email address that is
-  responsible for the demo. Don't include the `@allenai.org` portion,
-  just the prefix.
-* The `team` field is the name of the team at AI2 that's responsible for
-  the demo.
-
-After commiting and pushing these changes make sure to submit a
+Make sure to submit a
 [request to be onboarded](https://github.com/allenai/skiff/issues/new/choose).
 
 To start a version of the application locally for development purposes, run
