@@ -1,0 +1,73 @@
+[
+  {
+    "title": "TransformerQA",
+    "authors": [
+      {
+        "name": "Dirk Groeneveld",
+        "twitter": "@mechanicaldirk",
+        "affiliation": "Allen Institute for Artificial Intelligence",
+        "email": "dirkg@allenai.org",
+        "s2_author_page": "https://www.semanticscholar.org/author/Dirk-Groeneveld/3458736",
+        "google_scholar_author_page": "https://scholar.google.com/citations?user=KEhvGNMAAAAJ&hl=en&oi=ao"
+      }, {
+        "name": "Akshita Bhagia",
+        "affiliation": "Allen Institute for Artificial Intelligence",
+        "email": "akshitab@allenai.org"
+      }, {
+        "name": "Pete Walsh",
+        "twitter": "@epwalsh10",
+        "affiliation": "Allen Institute for Artificial Intelligence",
+        "email": "petew@allenai.org"
+      }
+    ],
+    "submission_date": "2021-01-06",
+    "description": "This model solves the reading comprehension model task. It is similar to the proposed model in [Devlin et al](https://api.semanticscholar.org/CorpusID:52967399), with improvements borrowed from the SQuAD model in the [transformers project](https://github.com/huggingface/transformers).",
+    "github_link": "https://github.com/allenai/allennlp-models/blob/main/allennlp_models/rc/models/transformer_qa.py",
+    "demo_link": "https://demo.allennlp.org/reading-comprehension",
+    "paper_link": "https://api.semanticscholar.org/CorpusID:52967399",
+    "allennlp_version": "1.3",
+    "supported_languages": ["en"],
+    "datasets": [
+      {
+        "name": "SQuAD 1.1",
+        "link": "https://rajpurkar.github.io/SQuAD-explorer/explore/1.1/dev/"
+      }, {
+        "name": "SQuAD 2.0",
+        "link": "https://rajpurkar.github.io/SQuAD-explorer/explore/v2.0/dev/"
+      }
+    ],
+    "tags": ["squad", "transformer", "qa", "reading comprehension", "question answering"]
+  }, {
+    "title": "Conditional Generation of Temporally-ordered Event Sequences",
+    "authors": [
+      {
+        "name": "Shih-Ting Lin",
+        "email": "j0717lin@cs.utexas.edu",
+        "affiliation": "The University of Texas at Austin"
+      }, {
+        "name": "Nathanael Chambers",
+        "email": "nchamber@usna.edu",
+        "affiliation": "United States Naval Academy"
+      }, {
+        "name": "Greg Durrett",
+        "email": "gdurrett@cs.utexas.edu",
+        "affiliation": "The University of Texas at Austin"
+      }
+    ],
+    "submission_date": "2021-01-10",
+    "description": "Models encapsulating narrative schema knowledge have proven to be useful for a range of event-related tasks, but these models typically do not engage with temporal relationships between events. We present a a BART-based conditional generation model capable of capturing event cooccurrence as well as temporality of event sequences. This single model can address both temporal ordering, sorting a given sequence of events into the order they occurred, and event infilling, predicting new events which fit into a temporally-ordered sequence of existing ones. Our model is trained as a denoising autoencoder: we take temporally-ordered event sequences, shuffle them, delete some events, and then attempting to recover the original event sequence. In this fashion, the model learns to make inferences given incomplete knowledge about the events in an underlying scenario. On the temporal ordering task, we show that our model is able to unscramble event sequences from existing datasets without access to explicitly labeled temporal training data, outperforming both a BERT-based pairwise model and a BERT-based pointer network. On event infilling, human evaluation shows that our model is able to generate events that fit better temporally into the input events when compared to GPT-2 story completion models.",
+    "github_link": "http://github.com/icantfind/therepo",
+    "paper_link": "https://arxiv.org/abs/2012.15786",
+    "allennlp_version": "1.0",
+    "datasets": [
+      {
+        "name": "CaTeRS",
+        "link": "https://www.usna.edu/Users/cs/nchamber/pubs/naacl2016-caters.pdf"
+      }, {
+        "name": "mctaco",
+        "link": "https://github.com/CogComp/MCTACO"
+      }
+    ],
+    "tags": ["gpt2", "bart", "transformers"]
+  }
+]
