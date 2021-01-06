@@ -1,12 +1,10 @@
-# skiff-template-python
+# AllenNLP Model Gallery
 
 A template application for [Skiff](https://github.com/allenai/skiff) This template includes:
 
 * A Python based, [Flask](http://flask.pocoo.org/) HTTP server that can
   execute model inference and render a user interface using good ole' HTML™.
 * Styles provided by [Shellac](https://github.com/allenai/varnish#shellac)
-
-To start a new repository from this template, click [here](https://github.com/allenai/skiff-template-python/generate).
 
 ## Prerequisites
 
