@@ -22,7 +22,7 @@ def create_ui() -> Blueprint:
                 break
 
         if model is None:
-            raise NotFound(f"No model with id {model_id} found.")
+            raise NotFound(f"No model with id {model_id}.")
 
         return render_template("model_details.html", model=model)
 
