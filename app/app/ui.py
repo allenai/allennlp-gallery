@@ -1,62 +1,29 @@
-from flask import Blueprint, render_template, request, current_app
-from json import dumps
-from time import sleep
-from random import randint
+from flask import Blueprint, render_template
+from app.models import load_all_models, Model
+from typing import Optional
+from werkzeug.exceptions import NotFound
 
 def create_ui() -> Blueprint:
-    """
-    Creates an instance of your UI. If you'd like to toggle behavior based on
-    command line flags or other inputs, add them as arguments to this function.
-    """
-    app = Blueprint('app', __name__)
+    app = Blueprint("app", __name__)
 
-    @app.route('/')
+    @app.route("/")
     def index():
-        question = request.args.get('question')
+        models = load_all_models()
+        return render_template("index.html", models=models)
 
-        first_answer = request.args.get('choice-1')
-        second_answer = request.args.get('choice-2')
+    @app.route("/model/<string:model_id>")
+    def model_details(model_id: str):
+        models = load_all_models()
 
-        # TODO: We should provide a prewritten mechanism for:
-        #   - Form validation
-        #   - Persistence of submitted values, along with errors
+        model: Optional[Model] = None
+        for m in models:
+            if m.id == model_id:
+                model = m
+                break
 
-        # We use a randomly generated value between 0 and 100, and select
-        # answer 1 if it's > 50 and answer 2 if it's < 50.
+        if model is None:
+            raise NotFound(f"No model with id {model_id} found.")
 
-        if question is not None and first_answer is not None and second_answer is not None:
-            random_value = randint(0, 100)
-            if random_value >= 50:
-                selected = first_answer
-            else:
-                selected = second_answer
-
-            # We produce a score with no actual meaning, it's just for demonstration
-            # purposes
-            score = random_value - 50 if random_value > 50 else random_value - 0
-
-            answer = {
-                'query': {
-                    'question': question,
-                    'choices': [ first_answer, second_answer ]
-                },
-                'answer': selected,
-                'score': score
-            }
-            current_app.logger.info(dumps(answer))
-
-            # Create simulated latency. You should definitely remove this. It's
-            # just so that the API actually behaves like one we'd expect you to
-            # build
-            sleep(randint(1,3))
-        else:
-            answer=None
-
-        return render_template('index.html', query=request.args, answer=answer)
-
-
-    @app.route('/about')
-    def about():
-        return render_template('about.html')
+        return render_template("model_details.html", model=model)
 
     return app

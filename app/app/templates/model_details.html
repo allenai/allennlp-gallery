@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}{{ model.config.title }} — AllenNLP Model Gallery{% endblock %}
+
+{% block content %}
+
+<h1>{{ model.config.title }}</h1>
+
+{{ model.description | safe }}
+
+{% endblock %}
