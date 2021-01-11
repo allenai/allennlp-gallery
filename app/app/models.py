@@ -73,14 +73,14 @@ class Model:
 
 def load_all_models() -> List[Model]:
     models = []
-    models_dir = Path(Path(__file__).parent, "models").resolve()
+    models_dir = Path(Path(__file__) / ".." / "models").resolve()
     for mid in listdir(models_dir):
-        path = Path(models_dir, mid)
+        path = models_dir / mid
         if not path.is_dir:
             continue
         try:
-            with open(Path(path, "config.json")) as cf:
-                with open(Path(path, "description.md")) as df:
+            with open(path / "config.json") as cf:
+                with open(path / "description.md") as df:
                     models.append(Model.from_dict(mid, json.load(cf), markdown(df.read())))
         except FileNotFoundError as err:
             logger = getLogger(__name__)
