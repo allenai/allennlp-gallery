@@ -11,8 +11,8 @@ from logging import getLogger
 @dataclass(frozen=True)
 class Author:
     name: str
-    affiliation: str
-    email: str
+    affiliation: Optional[str] = None
+    email: Optional[str] = None
     twitter: Optional[str] = None
     s2_author_page: Optional[str] = None
     google_scholar_author_page: Optional[str] = None
@@ -20,8 +20,8 @@ class Author:
     @staticmethod
     def from_dict(obj: dict) -> 'Author':
         return Author(obj["name"],
-                      obj["affiliation"],
-                      obj["email"],
+                      obj.get("affiliation"),
+                      obj.get("email"),
                       obj.get("twitter"),
                       obj.get("s2_author_page"),
                       obj.get("google_scholar_author_page"))
@@ -42,8 +42,8 @@ class ModelConfig:
     submission_date: date
     github_link: str
     allennlp_version: str
-    datasets: List[Dataset]
-    tags: List[str]
+    datasets: List[Dataset] = field(default_factory=list)
+    tags: List[str] = field(default_factory=list)
     supported_languages: List[str] = field(default_factory=list)
     paper_link: Optional[str] = None
     demo_link: Optional[str] = None
@@ -55,8 +55,8 @@ class ModelConfig:
                            datetime.strptime(obj["submission_date"], "%Y-%m-%d").date(),
                            obj["github_link"],
                            obj["allennlp_version"],
-                           [ Dataset.from_dict(d) for d in obj["datasets"] ],
-                           obj["tags"],
+                           [ Dataset.from_dict(d) for d in obj.get("datasets", []) ],
+                           obj.get("tags", []),
                            obj.get("supported_languages"),
                            obj.get("demo_link"),
                            obj.get("paper_link"))
