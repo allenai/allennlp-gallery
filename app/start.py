@@ -8,6 +8,7 @@ from flask import Flask, Response, request, jsonify
 from app.ui import create_ui
 from app.utils import StackdriverJsonFormatter
 from werkzeug.middleware.proxy_fix import ProxyFix
+from datetime import date
 
 def start():
     """
@@ -50,6 +51,10 @@ def start():
     logger.debug("AHOY! Let's get this boat out to water...")
 
     app = Flask("app")
+
+    @app.template_filter()
+    def formatted_date(d: date) -> str:
+        return d.strftime("%b %-d, %Y")
 
     # Bind the API functionality to our application. You can add additional
     # API endpoints by editing api.py.

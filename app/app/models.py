@@ -13,15 +13,23 @@ class Author:
     name: str
     affiliation: Optional[str] = None
     email: Optional[str] = None
+    photo_url: Optional[str] = None
     twitter: Optional[str] = None
     s2_author_page: Optional[str] = None
     google_scholar_author_page: Optional[str] = None
+
+    def initials(self) -> str:
+        parts = [ n[0] for n in self.name.split(' ') ]
+        if len(parts) < 2:
+            return parts[0]
+        return ''.join(parts[0] + parts[-1])
 
     @staticmethod
     def from_dict(obj: dict) -> 'Author':
         return Author(obj["name"],
                       obj.get("affiliation"),
                       obj.get("email"),
+                      obj.get("photo_url"),
                       obj.get("twitter"),
                       obj.get("s2_author_page"),
                       obj.get("google_scholar_author_page"))
@@ -57,7 +65,7 @@ class ModelConfig:
                            obj["allennlp_version"],
                            [ Dataset.from_dict(d) for d in obj.get("datasets", []) ],
                            obj.get("tags", []),
-                           obj.get("supported_languages"),
+                           obj.get("supported_languages", []),
                            obj.get("demo_link"),
                            obj.get("paper_link"))
 

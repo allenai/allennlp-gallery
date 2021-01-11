@@ -1,7 +1,3 @@
-/**
- * TODO: Most of this should be ported to shellac.
- */
-
 /* Global */
 
     html {
@@ -12,7 +8,25 @@
         background: #fff;
     }
 
+    hr {
+        margin-left: 0;
+        margin-right: 0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
 /* Typography */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+        font-family: 'Source Sans Pro', var(--typography-font-family-sans-serif);
+    }
 
     /* Remove the default margin on headers, when they're the first header
        on a page. */
@@ -27,6 +41,14 @@
 
     .no-wrap {
         white-space: nowrap;
+    }
+
+/* Button Fixes 
+   TODO (@codeviking): There should be a bug in @allenai/varnish for this. 
+ */
+
+    a[href].button.small {
+        padding: var(--spacing-xs) var(--spacing-md);
     }
 
 /* Header */
@@ -51,14 +73,12 @@
         overflow: hidden;
     }
 
-    .logo {
-        display: grid;
+    .logo a {
+        display: flex;
         align-items: center;
-        grid-template-columns: min-content auto;
         grid-gap: var(--spacing-sm);
     }
 
-    .logo a,
     .logo a svg {
         display: block;
     }
@@ -68,15 +88,7 @@
         padding: 14px 0;
     }
 
-    .logo a[href],
-    .logo a[href]:visited,
-    .logo a[href]:active,
-    .logo a[href]:hover {
-        color: var(--palette-text-default);
-        text-decoration: none;
-    }
-
-    .header-title {
+    .logo-text {
         display: inline-block;
         background: var(--palette-background-dark);
         border-radius: var(--shape-border-radius);
@@ -88,14 +100,8 @@
         line-height: 1.6;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-weight: 600;
-        font-family: 'Source Sans Pro', var(--typography-font-family-sans-serif);
+    .logo a:hover {
+        text-decoration: none;
     }
 
 /* Navigation and Sections */
@@ -118,4 +124,146 @@
         margin-right: 0;
     }
 
+
+/* Lists*/
+    
+    .action-list,
+    .author-list,
+    .meta-list,
+    .tag-list {
+        list-style-type: none;
+    }
+
+    .action-list, 
+    .tag-list {
+        display: flex;
+        gap: var(--spacing-md);
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .action-list,
+    .action-list li,
+    .author-list,
+    .author-list li,
+    .meta-list,
+    .meta-list li,
+    .tag-list,
+    .tag-list li {
+        padding: 0;
+        margin: 0;
+    }
+
+    .meta-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+        font-size: var(--typography-text-styles-small-font-size);
+    }
+
+    .meta-list li strong {
+        display: block;
+        padding-bottom: var(--spacing-xs2);
+        margin-bottom: var(--spacing-xs);
+        border-bottom: 1px solid var(--palette-border-default);
+        white-space: nowrap;
+    }
+
+    .meta-list li.tags {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .tag-list {
+        gap: var(--spacing-xs);
+    }
+
+    .tag-list li span {
+        display: inline-block;
+        background: var(--color-g2);
+        padding: var(--spacing-xs2) var(--spacing-xs);
+        line-height: 1;
+        border-radius: 50px;
+        color: var(--color-g9);
+    }
+
+/* Author List */
+
+    .author-list {
+        display: grid;
+        gap: var(--spacing-lg);
+        grid-auto-flow: column;
+        margin: var(--spacing-xl) 0 0;
+        font-size: var(--typography-text-styles-small-font-size);
+    }
+
+    .author-list li {
+        display: grid;
+        grid-template-rows: min-content 1fr min-content;
+        gap: var(--spacing-sm);
+    }
+
+    .author-list li .author-name-and-photo {
+        display: grid;
+        align-items: center;
+        gap: var(--spacing-md);
+        grid-template-columns: min-content 1fr;
+        padding: 0 0 var(--spacing-xs);
+        border-bottom: 1px solid var(--palette-border-default);
+    }
+
+    .author-initials,
+    .author-photo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        border: 1px solid var(--palette-border-default);
+        border-radius: 20px;
+        font-size: var(--typography-text-styles-small-font-size);
+        color: var(--color-b4);
+        font-weight: bold;
+        line-height: 1;
+        background: var(--color-n2);
+    }
+
+    .author-contact-info {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, min-content);
+        align-items: center;
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+    }
+
+    .author-contact-info a,
+    .author-contact-info a svg {
+        display: inline-block;
+    }
+    
+/* Model Details */
+
+    .details-title {
+        line-height: 1.1;
+        margin: 0 0 var(--spacing-sm);
+    }
+
+    .details-columns {
+        display: grid;
+        grid-template: "main meta" / 1fr 250px;
+        gap: var(--spacing-xl);
+    }
+
+    .details-columns .main {
+        font-size: var(--typography-text-styles-big-font-size);
+    }
+
+    .details-columns > * > :first-child {
+        margin-top: 0;
+    }
+
+    .dataset-names a:not(:last-child):after {
+        content: ", ";
+    }
 
