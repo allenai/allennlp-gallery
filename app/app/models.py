@@ -27,6 +27,8 @@ class Author:
 
     def initials(self) -> str:
         parts = [ n[0] for n in self.name.split(' ') ]
+        if len(parts) < 2:
+            return parts[0]
         return ''.join(parts[0] + parts[-1])
 
     @staticmethod
