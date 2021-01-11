@@ -1,5 +1,6 @@
 {
     "appName": "allennlp-gallery",
     "contact": "allennlp",
-    "team": "allennlp"
+    "team": "allennlp",
+    "customDomains": [ "models.allennlp.org" ]
 }
