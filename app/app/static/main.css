@@ -39,7 +39,7 @@
 
     header > .content {
         display: grid;
-        grid-template-columns: 1fr min-content min-content;
+        grid-template-columns: 1fr min-content;
         grid-gap: var(--spacing-xl);
         align-items: center;
         padding-top: var(--spacing-sm);
@@ -51,15 +51,21 @@
         overflow: hidden;
     }
 
-    header h3 {
-        margin: 0;
-    }
-
     .logo {
         display: grid;
         align-items: center;
         grid-template-columns: min-content auto;
-        grid-gap: var(--spacing-md);
+        grid-gap: var(--spacing-sm);
+    }
+
+    .logo a,
+    .logo a svg {
+        display: block;
+    }
+
+    .logo a {
+        /* Logos are supposed to be 50px high, but AlleNLP's is 22px high. This makes up for that. */
+        padding: 14px 0;
     }
 
     .logo a[href],
@@ -68,6 +74,28 @@
     .logo a[href]:hover {
         color: var(--palette-text-default);
         text-decoration: none;
+    }
+
+    .header-title {
+        display: inline-block;
+        background: var(--palette-background-dark);
+        border-radius: var(--shape-border-radius);
+        color: #fff;
+        padding: 0 var(--spacing-sm);
+        font-size: var(--typography-h5-font-size);
+        font-weight: 600;
+        font-family: 'Source Sans Pro', var(--typography-font-family-sans-serif);
+        line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+        font-family: 'Source Sans Pro', var(--typography-font-family-sans-serif);
     }
 
 /* Navigation and Sections */
