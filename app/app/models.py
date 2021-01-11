@@ -18,13 +18,6 @@ class Author:
     s2_author_page: Optional[str] = None
     google_scholar_author_page: Optional[str] = None
 
-    def has_contact_info(self) -> bool:
-        return (
-           self.twitter is not None
-           or self.s2_author_page is not None
-           or self.google_scholar_author_page is not None
-        )
-
     def initials(self) -> str:
         parts = [ n[0] for n in self.name.split(' ') ]
         if len(parts) < 2:
