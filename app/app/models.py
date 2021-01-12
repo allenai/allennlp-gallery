@@ -1,7 +1,7 @@
 import json
 
 from dataclasses import dataclass, field
-from typing import Optional, List
+from typing import Optional, List, Set
 from datetime import date, datetime
 from pathlib import Path
 from os import listdir
@@ -56,12 +56,11 @@ class ModelConfig:
     paper_link: Optional[str] = None
     demo_link: Optional[str] = None
 
-    def affiliations(self) -> List[str]:
+    def affiliations(self) -> Set[str]:
         return {
-            a
+            author.affiliation
             for author in self.authors
-            for a in author.affiliation
-            if a is not None
+            if author.affiliation is not None
         }
 
     @staticmethod
