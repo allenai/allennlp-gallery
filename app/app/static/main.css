@@ -84,8 +84,8 @@
 
     header > .content {
         display: grid;
-        grid-template-columns: 1fr min-content;
-        grid-gap: var(--spacing-xl);
+        grid-template-columns: min-content 1fr;
+        gap: var(--spacing-xl);
         align-items: center;
         padding-top: var(--spacing-sm);
         padding-bottom: var(--spacing-sm);
@@ -97,9 +97,10 @@
     }
 
     .logo a {
-        display: flex;
+        display: grid;
+        grid-template-columns: min-content 1fr;
         align-items: center;
-        grid-gap: var(--spacing-sm);
+        gap: var(--spacing-sm);
     }
 
     .logo a svg {
@@ -122,9 +123,14 @@
         text-decoration: none;
     }
 
+    .header-right {
+        display: flex;
+        justify-content: flex-end;
+    }
+
     @media (max-width: 520px) {
         .header-right {
-            display: none; 
+            visibility: hidden;
         }
     }
 
@@ -143,9 +149,12 @@
 
     .flex-row {
         display: flex;
-        gap: var(--spacing-md);
         align-items: center;
         flex-wrap: wrap;
+    }
+
+    .flex-row > *:not(:last-child) {
+        margin-right: var(--spacing-md);
     }
 
     .meta-list {
@@ -168,26 +177,39 @@
     }
 
     .tag-list {
-        gap: var(--spacing-xs);
+        display: block;
+        line-height: 2;
+    }
+
+    .tag-list > li {
+        display: inline-block;
+    }
+
+    .tag-list > li:not(:last-child) {
+        margin-right: var(--spacing-xs);
     }
 
     .tag-list li span {
-        display: inline-block;
+        display: block;
         background: var(--color-b1);
         border-radius: 50px;
         padding: var(--spacing-xs2) var(--spacing-xs);
         color: var(--color-b8);
-
         line-height: 1;
     }
 
     @media (max-width: 425px) {
         .action-list {
-            flex-direction: column;
+            display: block;
         }
 
         .action-list li {
-            width: 100%;
+            width: auto;
+            margin: 0;
+        }
+
+        .action-list > li:not(:last-child) {
+            margin: 0 0 var(--spacing-sm);
         }
 
         .action-list li .button {
@@ -200,9 +222,12 @@
 
     .author-list {
         align-items: stretch;
-        gap: var(--spacing-lg);
         margin: var(--spacing-xl) 0 0;
         font-size: var(--typography-text-styles-small-font-size);
+    }
+
+    .author-list > li:not(:last-child) {
+        margin-right: var(--spacing-lg);
     }
 
     .author-list li {
@@ -238,11 +263,8 @@
         background: var(--color-n2);
     }
 
-    .author-contact-info {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: var(--spacing-xs);
+    .author-contact-info > *:not(:last-child) {
+        margin-right: var(--spacing-xs);
     }
 
     .author-contact-info a,
@@ -263,11 +285,15 @@
 
     @media (max-width: 705px) {
         .author-list {
-            flex-direction: column;
+            display: block;
         }
 
         .author-list li {
             width: auto;
+        }
+
+        .author-list li:not(:last-child) {
+            margin: 0 0 var(--spacing-md);
         }
     }
     
@@ -358,6 +384,12 @@
         font-size: var(--typography-text-styles-jumbo-font-size);
     }
 
+    @media (max-width: 425px) {
+        .intro {
+            font-size: var(--typography-text-styles-big-font-size);
+        }
+    }
+
 
 /* Model List */
     
@@ -387,9 +419,11 @@
     }
 
     .model-list-model-meta {
-        gap: 1ch;
-        align-items: center;
         color: var(--color-n8);
+    }
+
+    .model-list-model-meta > *:not(:last-child) {
+        margin-right: 1ch;        
     }
 
     .model-list-model-meta,
@@ -417,8 +451,12 @@
     .model-list-model-affiliations,
     .model-list-model-authors {
         display: flex;
-        gap: 0.5ch;
         flex-wrap: wrap;
+    }
+
+    .model-list-model-affiliations > li:not(:last-child),
+    .model-list-model-authors > li:not(:last-child) {
+        margin-right: 0.5ch;
     }
     
     .model-list-model-affiliations > li:not(:last-child):after, 
@@ -437,6 +475,6 @@
     }
 
     .model-list .tag-list {
-        margin: var(--spacing-sm) 0 0;
+        margin: var(--spacing-xs) 0 0;
     }
 
