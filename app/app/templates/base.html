@@ -36,9 +36,15 @@
                         <span class="logo-text">Model Gallery</span>
                     </a>
                 </div>
+                <div class="header-right">
+                    <a class="button green-button nowrap small" 
+                       href="https://github.com/allenai/allennlp-gallery/issues/new"
+                       rel="noopener,noreferrer">Submit Your Model</a>
+                </div>
             </div>
         </header>
         <div class="bg-white">
+            {% block hero %}{% endblock %}
             <main>
                 {% block content %}{% endblock %}
             </main>

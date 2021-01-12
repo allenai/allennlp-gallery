@@ -1,13 +1,25 @@
 /* Global */
 
+    :root {
+        --line-height: 1.4;
+    }
+
     html {
         background: var(--color-n2);
+    }
+
+    /* TODO (@codeviking): Remove this once the bug is fixed in @allenai/varnish:
+       https://github.com/allenai/varnish/issues/376 */
+    body {
+        line-height: var(--line-height);
     }
 
     .bg-white {
         background: #fff;
     }
 
+    /* TODO (@codeviking): Remove this once the bug is fixed in @allenai/varnish:
+       https://github.com/allenai/varnish/issues/374 */
     hr {
         margin-left: 0;
         margin-right: 0;
@@ -18,12 +30,14 @@
 
 /* Typography */
 
+    /* AllenNLP has a custom font, which we use here. */
     h1,
     h2,
     h3,
     h4,
     h5,
-    h6 {
+    h6,
+    .brand-font {
         font-weight: 600;
         font-family: 'Source Sans Pro', var(--typography-font-family-sans-serif);
     }
@@ -43,12 +57,20 @@
         white-space: nowrap;
     }
 
-/* Button Fixes 
-   TODO (@codeviking): There should be a bug in @allenai/varnish for this. 
- */
+/* Buttons */
 
+    /* TODO (@codeviking): Remove this once the bug is fixed in @allenai/varnish. See:
+       https://github.com/allenai/varnish/issues/375 */
     a[href].button.small {
         padding: var(--spacing-xs) var(--spacing-md);
+    }
+
+    a[href].green-button {
+        background: var(--color-g7);
+    }
+
+    a[href].green-button:hover {
+        background: var(--color-g8);
     }
 
 /* Header */
@@ -92,8 +114,8 @@
         display: inline-block;
         background: var(--palette-background-dark);
         border-radius: var(--shape-border-radius);
-        color: #fff;
         padding: 0 var(--spacing-sm);
+        color: #fff;
         font-size: var(--typography-h5-font-size);
         font-weight: 600;
         font-family: 'Source Sans Pro', var(--typography-font-family-sans-serif);
@@ -104,54 +126,23 @@
         text-decoration: none;
     }
 
-/* Navigation and Sections */
-
-    section,
-    nav {
-        margin: var(--spacing-lg) 0;
-    }
-
-    nav {
-        display: flex;
-        align-items: center;
-    }
-
-    nav > a {
-        margin-right: var(--spacing-lg);
-    }
-
-    nav > a:last-child {
-        margin-right: 0;
-    }
-
-
 /* Lists*/
     
-    .action-list,
-    .author-list,
-    .meta-list,
-    .tag-list {
+    /* A "layout" list is one that's used for layout purposes, wherein the default styles
+       are reset / removed. */
+    .layout-list {
         list-style-type: none;
     }
 
-    .action-list, 
-    .tag-list {
+    .layout-list { 
+        padding: 0;
+        margin: 0;
+    }
+
+    .flex-row {
         display: flex;
         gap: var(--spacing-md);
         align-items: center;
-        flex-wrap: wrap;
-    }
-
-    .action-list,
-    .action-list li,
-    .author-list,
-    .author-list li,
-    .meta-list,
-    .meta-list li,
-    .tag-list,
-    .tag-list li {
-        padding: 0;
-        margin: 0;
     }
 
     .meta-list {
@@ -166,7 +157,6 @@
         padding-bottom: var(--spacing-xs2);
         margin-bottom: var(--spacing-xs);
         border-bottom: 1px solid var(--palette-border-default);
-        white-space: nowrap;
     }
 
     .meta-list li.tags {
@@ -180,11 +170,12 @@
 
     .tag-list li span {
         display: inline-block;
-        background: var(--color-g2);
-        padding: var(--spacing-xs2) var(--spacing-xs);
-        line-height: 1;
+        background: var(--color-b1);
         border-radius: 50px;
-        color: var(--color-g9);
+        padding: var(--spacing-xs2) var(--spacing-xs);
+        color: var(--color-b8);
+
+        line-height: 1;
     }
 
 /* Author List */
@@ -230,8 +221,7 @@
     }
 
     .author-contact-info {
-        display: grid;
-        grid-template-columns: 1fr repeat(2, min-content);
+        display: flex;
         align-items: center;
         flex-wrap: wrap;
         gap: var(--spacing-xs);
@@ -239,7 +229,7 @@
 
     .author-contact-info a,
     .author-contact-info a svg {
-        display: inline-block;
+        display: block;
     }
     
 /* Model Details */
@@ -265,5 +255,124 @@
 
     .dataset-names a:not(:last-child):after {
         content: ", ";
+    }
+
+/* Hero */
+
+    .hero {
+        display: grid;
+        grid-template-columns: min-content;
+        align-items: center;
+        justify-content: center;
+        padding: var(--spacing-xl4) var(--spacing-xl);
+        background: linear-gradient(to bottom,
+                                    var(--color-b6),
+                                    var(--color-b9) 90%);
+    } 
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0;
+    }
+
+    .hero-content svg {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero h1 {
+        color: #fff;
+        font-size: 6vw;
+        margin: 0;
+        white-space: nowrap;
+        line-height: 1;
+    }
+
+    @media (min-width: 1600px) {
+        .hero h1 {
+            font-size: 6rem;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .hero {
+            padding: var(--spacing-xl);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+    }
+
+/* Home Page */
+    
+    .intro {
+        font-size: var(--typography-text-styles-jumbo-font-size);
+    }
+
+
+/* Model List */
+    
+    .model-list-title {
+        margin: var(--spacing-xl) 0 var(--spacing-xs);
+    }
+
+    .model-list > li > a {
+        display: grid;
+    }
+
+    .model-list > li > a[href]:hover {
+        text-decoration: none;
+    }
+
+    .model-list > li {
+        border-top: 1px solid var(--palette-border-default);
+        padding: var(--spacing-md) 0;
+    }
+
+    .model-list > li:last-child {
+        border-bottom: 1px solid var(--palette-border-default);
+    }
+
+    .model-list-model-title {
+        font-size: var(--typography-h4-font-size);
+    }
+
+    .model-list-model-meta {
+        display: flex;
+        gap: 1ch;
+        align-items: center;
+        color: var(--color-n8);
+    }
+
+    .model-list-model-meta,
+    .model-list .tag-list {
+        font-size: var(--typography-text-styles-small-font-size);
+    }
+
+    .model-list-model-affiliations,
+    .model-list-model-authors {
+        display: flex;
+        gap: 0.5ch;
+        flex-wrap: wrap;
+    }
+    
+    .model-list-model-affiliations > li:not(:last-child):after, 
+    .model-list-model-authors > li:not(:last-child):after {
+        content: ",";
+    }
+
+    .model-list-model-authors {
+        font-weight: bold;
+    }
+
+    .small-bullet {
+        font-size: 0.5rem;
+        color: var(--color-n8);
+    }
+
+    .model-list .tag-list {
+        margin: var(--spacing-sm) 0 0;
     }
 

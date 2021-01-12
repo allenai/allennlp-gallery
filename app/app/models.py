@@ -56,6 +56,13 @@ class ModelConfig:
     paper_link: Optional[str] = None
     demo_link: Optional[str] = None
 
+    def affiliations(self) -> List[str]:
+        affil = set([])
+        for author in self.authors:
+            if author.affiliation is not None:
+                affil.add(author.affiliation)
+        return list(affil) 
+
     @staticmethod
     def from_dict(obj: dict) -> 'ModelConfig':
         return ModelConfig(obj["title"],
