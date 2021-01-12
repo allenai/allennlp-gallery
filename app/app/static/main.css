@@ -61,7 +61,8 @@
 
     /* TODO (@codeviking): Remove this once the bug is fixed in @allenai/varnish. See:
        https://github.com/allenai/varnish/issues/375 */
-    a[href].button.small {
+    a[href].button.small,
+    .button.small {
         padding: var(--spacing-xs) var(--spacing-md);
     }
 
@@ -110,20 +111,21 @@
         padding: 14px 0;
     }
 
-    .logo-text {
+    .logo-text,
+    .logo-text:hover {
         display: inline-block;
         background: var(--palette-background-dark);
-        border-radius: var(--shape-border-radius);
-        padding: 0 var(--spacing-sm);
         color: #fff;
-        font-size: var(--typography-h5-font-size);
-        font-weight: 600;
-        font-family: 'Source Sans Pro', var(--typography-font-family-sans-serif);
-        line-height: 1.6;
     }
 
     .logo a:hover {
         text-decoration: none;
+    }
+
+    @media (max-width: 520px) {
+        .header-right {
+            display: none; 
+        }
     }
 
 /* Lists*/
@@ -143,6 +145,7 @@
         display: flex;
         gap: var(--spacing-md);
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .meta-list {
@@ -178,23 +181,38 @@
         line-height: 1;
     }
 
+    @media (max-width: 425px) {
+        .action-list {
+            flex-direction: column;
+        }
+
+        .action-list li {
+            width: 100%;
+        }
+
+        .action-list li .button {
+            display: block;
+            text-align: center;
+        }
+    }
+
 /* Author List */
 
     .author-list {
-        display: grid;
+        align-items: stretch;
         gap: var(--spacing-lg);
-        grid-auto-flow: column;
         margin: var(--spacing-xl) 0 0;
         font-size: var(--typography-text-styles-small-font-size);
     }
 
     .author-list li {
         display: grid;
+        width: 195px;
         grid-template-rows: min-content 1fr min-content;
         gap: var(--spacing-sm);
     }
 
-    .author-list li .author-name-and-photo {
+    .author-name-and-photo {
         display: grid;
         align-items: center;
         gap: var(--spacing-md);
@@ -231,12 +249,35 @@
     .author-contact-info a svg {
         display: block;
     }
+
+    @media (max-width: 600px) {
+        .author-name-and-photo {
+            display: block;
+        }
+
+        .author-initials,
+        .author-photo {
+            display: none;
+        }
+    }
+
+    @media (max-width: 705px) {
+        .author-list {
+            flex-direction: column;
+        }
+
+        .author-list li {
+            width: auto;
+        }
+    }
     
 /* Model Details */
 
     .details-title {
         line-height: 1.1;
         margin: 0 0 var(--spacing-sm);
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .details-columns {
@@ -255,6 +296,12 @@
 
     .dataset-names a:not(:last-child):after {
         content: ", ";
+    }
+
+    @media (max-width: 800px) {
+        .details-columns {
+            display: block;
+        }
     }
 
 /* Hero */
@@ -340,7 +387,6 @@
     }
 
     .model-list-model-meta {
-        display: flex;
         gap: 1ch;
         align-items: center;
         color: var(--color-n8);
@@ -349,6 +395,23 @@
     .model-list-model-meta,
     .model-list .tag-list {
         font-size: var(--typography-text-styles-small-font-size);
+    }
+
+    @media (max-width: 600px) {
+        .model-list-model-meta,
+        .model-list-model-date,
+        .model-list-model-allennlp-version {
+            display: block;
+        }
+
+        .model-list-model-date,
+        .model-list-model-allennlp-version {
+            margin: calc(var(--spacing-xs2) / 2) 0;
+        }
+
+        .small-bullet {
+            display: none;
+        }
     }
 
     .model-list-model-affiliations,
@@ -369,6 +432,7 @@
 
     .small-bullet {
         font-size: 0.5rem;
+        line-height: 2.8;
         color: var(--color-n8);
     }
 
