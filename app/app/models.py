@@ -73,8 +73,8 @@ class ModelConfig:
                            [ Dataset.from_dict(d) for d in obj.get("datasets", []) ],
                            obj.get("tags", []),
                            obj.get("supported_languages", []),
-                           obj.get("demo_link"),
-                           obj.get("paper_link"))
+                           obj.get("paper_link"),
+                           obj.get("demo_link"))
 
 @dataclass(frozen=True)
 class Model:
