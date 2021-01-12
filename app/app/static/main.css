@@ -1,13 +1,25 @@
 /* Global */
 
+    :root {
+        --line-height: 1.4;
+    }
+
     html {
         background: var(--color-n2);
+    }
+
+    /* TODO (@codeviking): Remove this once the bug is fixed in @allenai/varnish:
+       https://github.com/allenai/varnish/issues/376 */
+    body {
+        line-height: var(--line-height);
     }
 
     .bg-white {
         background: #fff;
     }
 
+    /* TODO (@codeviking): Remove this once the bug is fixed in @allenai/varnish:
+       https://github.com/allenai/varnish/issues/374 */
     hr {
         margin-left: 0;
         margin-right: 0;
@@ -18,12 +30,14 @@
 
 /* Typography */
 
+    /* AllenNLP has a custom font, which we use here. */
     h1,
     h2,
     h3,
     h4,
     h5,
-    h6 {
+    h6,
+    .brand-font {
         font-weight: 600;
         font-family: 'Source Sans Pro', var(--typography-font-family-sans-serif);
     }
@@ -43,12 +57,21 @@
         white-space: nowrap;
     }
 
-/* Button Fixes 
-   TODO (@codeviking): There should be a bug in @allenai/varnish for this. 
- */
+/* Buttons */
 
-    a[href].button.small {
+    /* TODO (@codeviking): Remove this once the bug is fixed in @allenai/varnish. See:
+       https://github.com/allenai/varnish/issues/375 */
+    a[href].button.small,
+    .button.small {
         padding: var(--spacing-xs) var(--spacing-md);
+    }
+
+    a[href].green-button {
+        background: var(--color-g7);
+    }
+
+    a[href].green-button:hover {
+        background: var(--color-g8);
     }
 
 /* Header */
@@ -61,8 +84,8 @@
 
     header > .content {
         display: grid;
-        grid-template-columns: 1fr min-content;
-        grid-gap: var(--spacing-xl);
+        grid-template-columns: min-content 1fr;
+        gap: var(--spacing-xl);
         align-items: center;
         padding-top: var(--spacing-sm);
         padding-bottom: var(--spacing-sm);
@@ -74,9 +97,10 @@
     }
 
     .logo a {
-        display: flex;
+        display: grid;
+        grid-template-columns: min-content 1fr;
         align-items: center;
-        grid-gap: var(--spacing-sm);
+        gap: var(--spacing-sm);
     }
 
     .logo a svg {
@@ -88,70 +112,49 @@
         padding: 14px 0;
     }
 
-    .logo-text {
+    .logo-text,
+    .logo-text:hover {
         display: inline-block;
         background: var(--palette-background-dark);
-        border-radius: var(--shape-border-radius);
         color: #fff;
-        padding: 0 var(--spacing-sm);
-        font-size: var(--typography-h5-font-size);
-        font-weight: 600;
-        font-family: 'Source Sans Pro', var(--typography-font-family-sans-serif);
-        line-height: 1.6;
     }
 
     .logo a:hover {
         text-decoration: none;
     }
 
-/* Navigation and Sections */
-
-    section,
-    nav {
-        margin: var(--spacing-lg) 0;
-    }
-
-    nav {
+    .header-right {
         display: flex;
-        align-items: center;
+        justify-content: flex-end;
     }
 
-    nav > a {
-        margin-right: var(--spacing-lg);
+    @media (max-width: 520px) {
+        .header-right {
+            visibility: hidden;
+        }
     }
-
-    nav > a:last-child {
-        margin-right: 0;
-    }
-
 
 /* Lists*/
     
-    .action-list,
-    .author-list,
-    .meta-list,
-    .tag-list {
+    /* A "layout" list is one that's used for layout purposes, wherein the default styles
+       are reset / removed. */
+    .layout-list {
         list-style-type: none;
     }
 
-    .action-list, 
-    .tag-list {
+    .layout-list { 
+        padding: 0;
+        margin: 0;
+    }
+
+    .flex-row {
         display: flex;
-        gap: var(--spacing-md);
         align-items: center;
         flex-wrap: wrap;
     }
 
-    .action-list,
-    .action-list li,
-    .author-list,
-    .author-list li,
-    .meta-list,
-    .meta-list li,
-    .tag-list,
-    .tag-list li {
-        padding: 0;
-        margin: 0;
+    .flex-row > *:not(:last-child) {
+        margin-right: var(--spacing-md);
     }
 
     .meta-list {
@@ -166,7 +169,6 @@
         padding-bottom: var(--spacing-xs2);
         margin-bottom: var(--spacing-xs);
         border-bottom: 1px solid var(--palette-border-default);
-        white-space: nowrap;
     }
 
     .meta-list li.tags {
@@ -175,35 +177,67 @@
     }
 
     .tag-list {
-        gap: var(--spacing-xs);
+        display: block;
+        line-height: 2;
+    }
+
+    .tag-list > li {
+        display: inline-block;
+    }
+
+    .tag-list > li:not(:last-child) {
+        margin-right: var(--spacing-xs);
     }
 
     .tag-list li span {
-        display: inline-block;
-        background: var(--color-g2);
-        padding: var(--spacing-xs2) var(--spacing-xs);
-        line-height: 1;
+        display: block;
+        background: var(--color-b1);
         border-radius: 50px;
-        color: var(--color-g9);
+        padding: var(--spacing-xs2) var(--spacing-xs);
+        color: var(--color-b8);
+        line-height: 1;
+    }
+
+    @media (max-width: 425px) {
+        .action-list {
+            display: block;
+        }
+
+        .action-list li {
+            width: auto;
+            margin: 0;
+        }
+
+        .action-list > li:not(:last-child) {
+            margin: 0 0 var(--spacing-sm);
+        }
+
+        .action-list li .button {
+            display: block;
+            text-align: center;
+        }
     }
 
 /* Author List */
 
     .author-list {
-        display: grid;
-        gap: var(--spacing-lg);
-        grid-auto-flow: column;
+        align-items: stretch;
         margin: var(--spacing-xl) 0 0;
         font-size: var(--typography-text-styles-small-font-size);
     }
 
+    .author-list > li:not(:last-child) {
+        margin-right: var(--spacing-lg);
+    }
+
     .author-list li {
         display: grid;
+        width: 195px;
         grid-template-rows: min-content 1fr min-content;
         gap: var(--spacing-sm);
     }
 
-    .author-list li .author-name-and-photo {
+    .author-name-and-photo {
         display: grid;
         align-items: center;
         gap: var(--spacing-md);
@@ -229,17 +263,38 @@
         background: var(--color-n2);
     }
 
-    .author-contact-info {
-        display: grid;
-        grid-template-columns: 1fr repeat(2, min-content);
-        align-items: center;
-        flex-wrap: wrap;
-        gap: var(--spacing-xs);
+    .author-contact-info > *:not(:last-child) {
+        margin-right: var(--spacing-xs);
     }
 
     .author-contact-info a,
     .author-contact-info a svg {
-        display: inline-block;
+        display: block;
+    }
+
+    @media (max-width: 600px) {
+        .author-name-and-photo {
+            display: block;
+        }
+
+        .author-initials,
+        .author-photo {
+            display: none;
+        }
+    }
+
+    @media (max-width: 705px) {
+        .author-list {
+            display: block;
+        }
+
+        .author-list li {
+            width: auto;
+        }
+
+        .author-list li:not(:last-child) {
+            margin: 0 0 var(--spacing-md);
+        }
     }
     
 /* Model Details */
@@ -247,6 +302,8 @@
     .details-title {
         line-height: 1.1;
         margin: 0 0 var(--spacing-sm);
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .details-columns {
@@ -265,5 +322,159 @@
 
     .dataset-names a:not(:last-child):after {
         content: ", ";
+    }
+
+    @media (max-width: 800px) {
+        .details-columns {
+            display: block;
+        }
+    }
+
+/* Hero */
+
+    .hero {
+        display: grid;
+        grid-template-columns: min-content;
+        align-items: center;
+        justify-content: center;
+        padding: var(--spacing-xl4) var(--spacing-xl);
+        background: linear-gradient(to bottom,
+                                    var(--color-b6),
+                                    var(--color-b9) 90%);
+    } 
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0;
+    }
+
+    .hero-content svg {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero h1 {
+        color: #fff;
+        font-size: 6vw;
+        margin: 0;
+        white-space: nowrap;
+        line-height: 1;
+    }
+
+    @media (min-width: 1600px) {
+        .hero h1 {
+            font-size: 6rem;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .hero {
+            padding: var(--spacing-xl);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+    }
+
+/* Home Page */
+    
+    .intro {
+        font-size: var(--typography-text-styles-jumbo-font-size);
+    }
+
+    @media (max-width: 425px) {
+        .intro {
+            font-size: var(--typography-text-styles-big-font-size);
+        }
+    }
+
+
+/* Model List */
+    
+    .model-list-title {
+        margin: var(--spacing-xl) 0 var(--spacing-xs);
+    }
+
+    .model-list > li > a {
+        display: grid;
+    }
+
+    .model-list > li > a[href]:hover {
+        text-decoration: none;
+    }
+
+    .model-list > li {
+        border-top: 1px solid var(--palette-border-default);
+        padding: var(--spacing-md) 0;
+    }
+
+    .model-list > li:last-child {
+        border-bottom: 1px solid var(--palette-border-default);
+    }
+
+    .model-list-model-title {
+        font-size: var(--typography-h4-font-size);
+    }
+
+    .model-list-model-meta {
+        color: var(--color-n8);
+    }
+
+    .model-list-model-meta > *:not(:last-child) {
+        margin-right: 1ch;        
+    }
+
+    .model-list-model-meta,
+    .model-list .tag-list {
+        font-size: var(--typography-text-styles-small-font-size);
+    }
+
+    @media (max-width: 600px) {
+        .model-list-model-meta,
+        .model-list-model-date,
+        .model-list-model-allennlp-version {
+            display: block;
+        }
+
+        .model-list-model-date,
+        .model-list-model-allennlp-version {
+            margin: calc(var(--spacing-xs2) / 2) 0;
+        }
+
+        .small-bullet {
+            display: none;
+        }
+    }
+
+    .model-list-model-affiliations,
+    .model-list-model-authors {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .model-list-model-affiliations > li:not(:last-child),
+    .model-list-model-authors > li:not(:last-child) {
+        margin-right: 0.5ch;
+    }
+    
+    .model-list-model-affiliations > li:not(:last-child):after, 
+    .model-list-model-authors > li:not(:last-child):after {
+        content: ",";
+    }
+
+    .model-list-model-authors {
+        font-weight: bold;
+    }
+
+    .small-bullet {
+        font-size: 0.5rem;
+        line-height: 2.8;
+        color: var(--color-n8);
+    }
+
+    .model-list .tag-list {
+        margin: var(--spacing-xs) 0 0;
     }
 

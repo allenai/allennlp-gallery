@@ -1,6 +1,7 @@
 <!DOCTYPE html><html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@allenai/varnish@2.0.7/dist/shellac.min.css">
         <link rel="stylesheet" href="{{ url_for("static", filename="main.css") }}">
@@ -33,12 +34,18 @@
                             <path d="M109.9,21.3V1h8.3c0.8,0,1.6,0.2,2.3,0.5c0.7,0.4,1.3,0.8,1.8,1.4c0.5,0.6,0.9,1.2,1.2,2c0.3,0.7,0.4,1.5,0.4,2.3 c0,0.8-0.1,1.6-0.4,2.3c-0.3,0.8-0.7,1.4-1.2,2c-0.5,0.6-1.1,1-1.8,1.4c-0.7,0.4-1.4,0.5-2.3,0.5h-7.5v7.8H109.9z M110.9,12.5h7.5 c0.7,0,1.4-0.2,1.9-0.5c0.6-0.3,1.1-0.7,1.5-1.2c0.4-0.5,0.7-1.1,0.9-1.7c0.2-0.6,0.3-1.3,0.3-2c0-0.7-0.1-1.3-0.4-2 c-0.3-0.6-0.6-1.2-1-1.7c-0.4-0.5-0.9-0.9-1.5-1.2c-0.6-0.3-1.2-0.4-1.9-0.4h-7.3V12.5z"></path>
                             <path d="M18.4,4.6c-1.7,0.9-3.3,2-4.9,3.1c0,0,0,0,0,0v0c0,0,0,0,0,0L11,0.4H7.3L0.2,20.8L0,21.5h4.1c0,0,0,0,0.1-0.1 c2-3.2,4.4-6.1,7-8.8l2.9,8.9h4.1L14.2,9.8c1.3-1.2,2.7-2.3,4.2-3.3V4.6z M6.8,13.2l2.3-7.1l1.3,3.9C9.2,11,8,12,6.8,13.2z"></path>
                         </svg>
-                        <span class="logo-text">Model Gallery</span>
+                        <span class="no-wrap button small logo-text">Model Gallery</span>
                     </a>
+                </div>
+                <div class="header-right">
+                    <a class="button green-button nowrap small" 
+                       href="https://github.com/allenai/allennlp-gallery/issues/new"
+                       rel="noopener,noreferrer">Submit Your Model</a>
                 </div>
             </div>
         </header>
         <div class="bg-white">
+            {% block hero %}{% endblock %}
             <main>
                 {% block content %}{% endblock %}
             </main>

@@ -1,7 +1,7 @@
 import json
 
 from dataclasses import dataclass, field
-from typing import Optional, List
+from typing import Optional, List, Set
 from datetime import date, datetime
 from pathlib import Path
 from os import listdir
@@ -56,6 +56,13 @@ class ModelConfig:
     paper_link: Optional[str] = None
     demo_link: Optional[str] = None
 
+    def affiliations(self) -> Set[str]:
+        return {
+            author.affiliation
+            for author in self.authors
+            if author.affiliation is not None
+        }
+
     @staticmethod
     def from_dict(obj: dict) -> 'ModelConfig':
         return ModelConfig(obj["title"],
@@ -95,4 +102,3 @@ def load_all_models() -> List[Model]:
             logger.error(f"Model '{mid}' Skipped: {err}")
             continue
     return models
-
