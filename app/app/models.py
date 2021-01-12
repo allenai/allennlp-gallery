@@ -57,11 +57,12 @@ class ModelConfig:
     demo_link: Optional[str] = None
 
     def affiliations(self) -> List[str]:
-        affil = set([])
-        for author in self.authors:
-            if author.affiliation is not None:
-                affil.add(author.affiliation)
-        return list(affil) 
+        return {
+            a
+            for author in self.authors
+            for a in author.affiliation
+            if a is not None
+        }
 
     @staticmethod
     def from_dict(obj: dict) -> 'ModelConfig':
@@ -102,4 +103,3 @@ def load_all_models() -> List[Model]:
             logger.error(f"Model '{mid}' Skipped: {err}")
             continue
     return models
-
