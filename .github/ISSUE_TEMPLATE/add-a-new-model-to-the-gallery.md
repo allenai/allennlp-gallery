@@ -2,7 +2,7 @@
 name: Add a new model to the gallery
 about: Template for adding a new model to the gallery
 title: 'New model: MyModel'
-labels: ''
+labels: 'new model'
 assignees: ''
 
 ---
