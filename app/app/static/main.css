@@ -69,7 +69,7 @@
     a[href].button.large,
     .button.large {
         padding: var(--spacing-lg) var(--spacing-lg);
-        font-size: larger;
+        font-size: var(--typography-text-styles-big-font-size);
     }
 
     a[href].green-button {
@@ -494,4 +494,3 @@
     .model-list .tag-list {
         margin: var(--spacing-xs) 0 0;
     }
-
