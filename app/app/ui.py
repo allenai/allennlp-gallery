@@ -11,6 +11,10 @@ def create_ui() -> Blueprint:
         models = load_all_models()
         return render_template("index.html", models=models)
 
+    @app.route("/add_model")
+    def add_model():
+        return render_template("add_model.html")
+
     @app.route("/model/<string:model_id>")
     def model_details(model_id: str):
         models = load_all_models()
