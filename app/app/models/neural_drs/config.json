@@ -1,0 +1,35 @@
+{
+  "title": "Character-level Representations Improve DRS-based Semantic Parsing Even in the Age of BERT",
+  "authors": [
+    {
+      "name": "Rik van Noord",
+      "email": "rikvannoord@gmail.com",
+      "affiliation": "University of Groningen",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=FB7n4U0AAAAJ",
+      "s2_author_page": "https://www.semanticscholar.org/author/Rik-van-Noord/66583219"
+    }, {
+      "name": "Antonio Toral",
+      "email": "a.toral.ruiz@rug.nl",
+      "affiliation": "University of Groningen",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=YcdNfhcAAAAJ",
+      "s2_author_page": "https://www.semanticscholar.org/author/Antonio-Toral/144514048"
+    }, {
+      "name": "Johan Bos",
+      "email": "johan.bos@rug.nl",
+      "affiliation": "University of Groningen",
+      "google_scholar_author_page": "https://scholar.google.nl/citations?user=Pkj8OSoAAAAJ",
+      "s2_author_page": "https://www.semanticscholar.org/author/Johan-Bos/3461596"
+    }
+  ],
+  "submission_date": "2021-02-02",
+  "github_link": "https://github.com/RikVN/Neural_DRS",
+  "paper_link": "https://www.aclweb.org/anthology/2020.emnlp-main.371.pdf",
+  "allennlp_version": "0.9.0",
+  "datasets": [
+    {
+      "name": "Parallel Meaning Bank",
+      "link": "https://pmb.let.rug.nl"
+    }
+  ],
+  "tags": ["semantic parsing"]
+}
