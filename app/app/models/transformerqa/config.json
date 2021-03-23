@@ -24,7 +24,7 @@
   "github_link": "https://github.com/allenai/allennlp-models/blob/main/allennlp_models/rc/models/transformer_qa.py",
   "demo_link": "https://demo.allennlp.org/reading-comprehension",
   "paper_link": "https://api.semanticscholar.org/CorpusID:52967399",
-  "allennlp_version": "1.3",
+  "allennlp_version": "2.1",
   "supported_languages": ["en"],
   "datasets": [
     {
