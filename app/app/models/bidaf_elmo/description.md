@@ -8,4 +8,4 @@ layers of bi-LSTMs/GRUs, and do a softmax over span start and span end.
 This model is maintained by the AllenNLP team and its contributors on the AllenNLP
 models repository at https://github.com/allenai/allennlp-models.
 
-It achieves 80% F1 and 71% exact match on the SQuAD 2.0 validation set.
+It achieves 80% F1 and 71% exact match on the SQuAD 1.1 validation set.
