@@ -21,7 +21,7 @@
     }
   ],
   "submission_date": "2021-01-06",
-  "github_link": "https://github.com/allenai/allennlp-models/blob/main/allennlp_models/rc/models/transformer_qa.py",
+  "github_link": "https://github.com/allenai/allennlp-models/blob/main/training_config/rc/transformer_qa.jsonnet",
   "demo_link": "https://demo.allennlp.org/reading-comprehension",
   "paper_link": "https://api.semanticscholar.org/CorpusID:52967399",
   "allennlp_version": "2.1",
