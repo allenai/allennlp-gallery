@@ -68,7 +68,7 @@
 
     a[href].button.large,
     .button.large {
-        padding: var(--spacing-lg) var(--spacing-lg);
+        padding: var(--spacing-md) var(--spacing-lg);
         font-size: var(--typography-text-styles-big-font-size);
     }
 
