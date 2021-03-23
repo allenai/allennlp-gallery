@@ -1,13 +1,13 @@
 ---
-name: Add a new model to the gallery
-about: Template for adding a new model to the gallery
-title: 'New model: MyModel'
-labels: 'new model'
+name: Add a new project to the gallery
+about: Template for adding a new project to the gallery
+title: 'New project: MyProject'
+labels: 'new project'
 assignees: ''
 
 ---
 
-Model metadata:
+Project metadata:
 ```
 {
   "title": "Warp Drive Considered Harmful",
@@ -41,4 +41,5 @@ Model metadata:
 
 Description:
 
-In 2285, Captain James Kirk and Science Officer S'chn T'gai Spock conducted a natural experiment in radiation poisoning from warp drives. This work illustrates our findings and suggests a way forward.
+In 2285, Captain James Kirk and Science Officer S'chn T'gai Spock conducted a natural experiment in radiation
+poisoning from warp drives. This work illustrates our findings and suggests a way forward.

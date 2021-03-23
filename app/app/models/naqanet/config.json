@@ -1,0 +1,41 @@
+{
+  "title": "Neural Module Network",
+  "authors": [
+    {
+      "name": "Mark Neumann",
+      "twitter": "@MarkNeumannnn",
+      "email": "mark.neumann.1992@gmail.com",
+      "s2_author_page": "https://www.semanticscholar.org/author/Mark-Neumann/50043859",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=vlrP560AAAAJ"
+    }, {
+      "name": "Joel Grus",
+      "twitter": "@joelgrus",
+      "email": "joelgrus-at-gmail",
+      "s2_author_page": "https://www.semanticscholar.org/author/Joel-Grus/40695489"
+    }, {
+      "name": "Matt Gardner",
+      "twitter": "@nlpmattg",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "email": "mattg@allenai.org",
+      "s2_author_page": "https://www.semanticscholar.org/author/Matt-Gardner/40642935",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=SfKdzrUAAAAJ"
+    }, {
+      "name": "Akshita Bhagia",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "email": "akshitab@allenai.org"
+    }
+  ],
+  "submission_date": "2021-03-23",
+  "github_link": "https://github.com/nitishgupta/nmn-drop",
+  "demo_link": "https://demo.allennlp.org/reading-comprehension",
+  "paper_link": "https://api.semanticscholar.org/CorpusID:5276660",
+  "allennlp_version": "2.1.0",
+  "supported_languages": ["en"],
+  "datasets": [
+    {
+      "name": "DROP",
+      "link": "https://allennlp.org/drop"
+    }
+  ],
+  "tags": ["drop", "naqanet", "qa", "reading comprehension", "question answering"]
+}
