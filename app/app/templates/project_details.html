@@ -89,7 +89,7 @@
 
         <hr>
 
-        {{ project.description | safe }}
+        {{ project.description | md_to_html | safe }}
     </div>
 
     <div class="meta">

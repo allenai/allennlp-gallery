@@ -2,9 +2,18 @@ from flask import Blueprint, render_template
 from .projects import load_all_projects, Project
 from typing import Optional
 from werkzeug.exceptions import NotFound
+from markdown import markdown
 
 def create_ui() -> Blueprint:
     app = Blueprint("app", __name__)
+
+    @app.app_template_filter()
+    def md_to_html(md: str) -> str:
+        return markdown(md)
+
+    @app.app_template_filter()
+    def newlines_to_spaces(s: str) -> str:
+        return s.replace("\n", " ")
 
     default_title = "AllenNLP Project Gallery"
     default_description = (

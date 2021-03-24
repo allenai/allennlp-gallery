@@ -5,7 +5,6 @@ from typing import Optional, List, Set
 from datetime import date, datetime
 from pathlib import Path
 from os import listdir
-from markdown import markdown
 from logging import getLogger
 
 @dataclass(frozen=True)
@@ -96,7 +95,7 @@ def load_all_projects() -> List[Project]:
         try:
             with open(path / "config.json") as cf:
                 with open(path / "description.md") as df:
-                    projects.append(Project.from_dict(mid, json.load(cf), markdown(df.read())))
+                    projects.append(Project.from_dict(mid, json.load(cf), df.read()))
         except FileNotFoundError as err:
             logger = getLogger(__name__)
             logger.error(f"Project '{mid}' Skipped: {err}")
