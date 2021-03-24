@@ -9,7 +9,7 @@ def create_ui() -> Blueprint:
 
     @app.app_template_filter()
     def md_to_html(md: str) -> str:
-        return markdown(md)
+        return markdown(md, output_format='html')
 
     @app.app_template_filter()
     def newlines_to_spaces(s: str) -> str:
