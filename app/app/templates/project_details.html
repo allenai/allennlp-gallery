@@ -33,6 +33,7 @@
 
 <div class="details-columns">
     <div class="main">
+        <h5>Implemented By:</h5>
         <ul class="layout-list author-list">
             {% for author in project.config.authors: %}
                 <li>
@@ -90,6 +91,8 @@
         </ul>
 
         <hr>
+
+        <h5>Description:</h5>
 
         {{ project.description | md_to_html | safe }}
     </div>
