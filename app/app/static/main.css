@@ -405,6 +405,10 @@
         .hero h1 {
             font-size: 3rem;
         }
+
+        .hero-content h2:only-child {
+            font-size: 2rem; 
+        }
     }
 
 /* Home Page */
