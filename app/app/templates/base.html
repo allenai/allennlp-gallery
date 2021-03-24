@@ -2,7 +2,18 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>{% block title %}{% endblock %}</title>
+        <title>{{ title }}</title>
+        <meta name="description" content="{{ description }}" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="{{ title }}" />
+        <meta name="twitter:description" content="{{ description }}" />
+        <meta name="twitter:site" content="@ai2_allennlp" />
+        <meta name="twitter:image" content="https://gallery.allennlp.org{{ url_for("static", filename="social.png") }}" />
+        <meta property="og:title" content={{ title }} />
+        <meta property="og:description" content="{{ description }}" />
+        <meta property="og:image" content="https://gallery.allennlp.org{{ url_for("static", filename="social.png") }}" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@allenai/varnish@2.0.7/dist/shellac.min.css">
         <link rel="stylesheet" href="{{ url_for("static", filename="main.css") }}">
         <link rel="icon" href="{{ url_for("static", filename="favicon.ico") }}">
