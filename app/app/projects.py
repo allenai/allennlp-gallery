@@ -44,7 +44,7 @@ class Dataset:
         return Dataset(obj["name"], obj["link"])
 
 @dataclass(frozen=True)
-class ModelConfig:
+class ProjectConfig:
     title: str
     authors: List[Author]
     submission_date: date
@@ -64,8 +64,8 @@ class ModelConfig:
         }
 
     @staticmethod
-    def from_dict(obj: dict) -> 'ModelConfig':
-        return ModelConfig(obj["title"],
+    def from_dict(obj: dict) -> 'ProjectConfig':
+        return ProjectConfig(obj["title"],
                            [ Author.from_dict(a) for a in obj["authors"] ],
                            datetime.strptime(obj["submission_date"], "%Y-%m-%d").date(),
                            obj["github_link"],
@@ -77,28 +77,28 @@ class ModelConfig:
                            obj.get("demo_link"))
 
 @dataclass(frozen=True)
-class Model:
+class Project:
     id: str
-    config: ModelConfig
+    config: ProjectConfig
     description: str
 
     @staticmethod
-    def from_dict(id: str, config: dict, description: str) -> 'Model':
-        return Model(id, ModelConfig.from_dict(config), description)
+    def from_dict(id: str, config: dict, description: str) -> 'Project':
+        return Project(id, ProjectConfig.from_dict(config), description)
 
-def load_all_models() -> List[Model]:
-    models = []
-    models_dir = Path(Path(__file__) / ".." / "models").resolve()
-    for mid in listdir(models_dir):
-        path = models_dir / mid
+def load_all_projects() -> List[Project]:
+    projects = []
+    projects_dir = Path(Path(__file__) / ".." / "projects").resolve()
+    for mid in listdir(projects_dir):
+        path = projects_dir / mid
         if not path.is_dir:
             continue
         try:
             with open(path / "config.json") as cf:
                 with open(path / "description.md") as df:
-                    models.append(Model.from_dict(mid, json.load(cf), markdown(df.read())))
+                    projects.append(Project.from_dict(mid, json.load(cf), markdown(df.read())))
         except FileNotFoundError as err:
             logger = getLogger(__name__)
-            logger.error(f"Model '{mid}' Skipped: {err}")
+            logger.error(f"Project '{mid}' Skipped: {err}")
             continue
-    return models
+    return projects

@@ -424,53 +424,53 @@
 
 /* Model List */
 
-    .model-list-title {
+    .project-list-title {
         margin: var(--spacing-xl) 0 var(--spacing-xs);
     }
 
-    .model-list > li > a {
+    .project-list > li > a {
         display: grid;
     }
 
-    .model-list > li > a[href]:hover {
+    .project-list > li > a[href]:hover {
         text-decoration: none;
     }
 
-    .model-list > li {
+    .project-list > li {
         border-top: 1px solid var(--palette-border-default);
         padding: var(--spacing-md) 0;
     }
 
-    .model-list > li:last-child {
+    .project-list > li:last-child {
         border-bottom: 1px solid var(--palette-border-default);
     }
 
-    .model-list-model-title {
+    .project-list-project-title {
         font-size: var(--typography-h4-font-size);
     }
 
-    .model-list-model-meta {
+    .project-list-project-meta {
         color: var(--color-n8);
     }
 
-    .model-list-model-meta > *:not(:last-child) {
+    .project-list-project-meta > *:not(:last-child) {
         margin-right: 1ch;
     }
 
-    .model-list-model-meta,
-    .model-list .tag-list {
+    .project-list-project-meta,
+    .project-list .tag-list {
         font-size: var(--typography-text-styles-small-font-size);
     }
 
     @media (max-width: 600px) {
-        .model-list-model-meta,
-        .model-list-model-date,
-        .model-list-model-allennlp-version {
+        .project-list-project-meta,
+        .project-list-project-date,
+        .project-list-project-allennlp-version {
             display: block;
         }
 
-        .model-list-model-date,
-        .model-list-model-allennlp-version {
+        .project-list-project-date,
+        .project-list-project-allennlp-version {
             margin: calc(var(--spacing-xs2) / 2) 0;
         }
 
@@ -479,23 +479,23 @@
         }
     }
 
-    .model-list-model-affiliations,
-    .model-list-model-authors {
+    .project-list-project-affiliations,
+    .project-list-project-authors {
         display: flex;
         flex-wrap: wrap;
     }
 
-    .model-list-model-affiliations > li:not(:last-child),
-    .model-list-model-authors > li:not(:last-child) {
+    .project-list-project-affiliations > li:not(:last-child),
+    .project-list-project-authors > li:not(:last-child) {
         margin-right: 0.5ch;
     }
 
-    .model-list-model-affiliations > li:not(:last-child):after,
-    .model-list-model-authors > li:not(:last-child):after {
+    .project-list-project-affiliations > li:not(:last-child):after,
+    .project-list-project-authors > li:not(:last-child):after {
         content: ",";
     }
 
-    .model-list-model-authors {
+    .project-list-project-authors {
         font-weight: bold;
     }
 
@@ -505,6 +505,6 @@
         color: var(--color-n8);
     }
 
-    .model-list .tag-list {
+    .project-list .tag-list {
         margin: var(--spacing-xs) 0 0;
     }

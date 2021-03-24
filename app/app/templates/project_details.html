@@ -4,24 +4,24 @@
 
 <p><a href="{{ url_for('app.index') }}">&laquo; Back to all Projects</a></p>
 
-<h1 class="details-title">{{ model.config.title }}</h1>
+<h1 class="details-title">{{ project.config.title }}</h1>
 
 <ul class="layout-list flex-row action-list">
     <li>
-        <a class="button small" href="{{ model.config.github_link }}" rel="noopener,noreferrer">
+        <a class="button small" href="{{ project.config.github_link }}" rel="noopener,noreferrer">
             Source Code
         </a>
     </li>
-    {% if model.config.paper_link %}
+    {% if project.config.paper_link %}
         <li>
-            <a class="button small" href="{{ model.config.paper_link }}" rel="noopener,noreferrer">
+            <a class="button small" href="{{ project.config.paper_link }}" rel="noopener,noreferrer">
                 View Paper
             </a>
         </li>
     {% endif %}
-    {% if model.config.demo_link %}
+    {% if project.config.demo_link %}
         <li>
-            <a class="button small" href="{{ model.config.demo_link }}" rel="noopener,noreferrer">
+            <a class="button small" href="{{ project.config.demo_link }}" rel="noopener,noreferrer">
                 View Demo
             </a>
         </li>
@@ -34,7 +34,7 @@
 <div class="details-columns">
     <div class="main">
         <ul class="layout-list flex-row author-list">
-            {% for author in model.config.authors: %}
+            {% for author in project.config.authors: %}
                 <li>
                     <div class="author-name-and-photo">
                         {% if author.photo_url is not none: %}
@@ -89,7 +89,7 @@
 
         <hr>
 
-        {{ model.description | safe }}
+        {{ project.description | safe }}
     </div>
 
     <div class="meta">
@@ -97,27 +97,27 @@
             <li class="tags">
                 <strong>Tags:</strong>
                 <ul class="layout-list flex-row tag-list">
-                    {% for tag in model.config.tags %}
+                    {% for tag in project.config.tags %}
                         <li><span>{{ tag }}</span></li>
                     {% endfor %}
                 </ul>
             </li>
             <li>
                 <strong>AllenNLP Version:</strong>
-                v{{ model.config.allennlp_version }}
+                v{{ project.config.allennlp_version }}
             </li>
             <li>
                 <strong>Languages:</strong>
-                {% if model.config.supported_languages | length == 0 %}
+                {% if project.config.supported_languages | length == 0 %}
                     Unknown
                 {% else %}
-                    {{ model.config.supported_languages | join(", ") }}
+                    {{ project.config.supported_languages | join(", ") }}
                 {% endif %}
             </li>
             <li>
                 <strong>Datasets:</strong>
                 <div class="dataset-names">
-                    {% for dataset in model.config.datasets: %}
+                    {% for dataset in project.config.datasets: %}
                         <a href="{{ dataset.link }}" 
                            rel="nopener,noreferrer">{{ dataset.name }}</a>
                     {% endfor %}
@@ -125,7 +125,7 @@
             </li>
             <li>
                 <strong>Submitted On</strong>
-                {{ model.config.submission_date | formatted_date }}
+                {{ project.config.submission_date | formatted_date }}
             </li>
         </ul>
     </div>
