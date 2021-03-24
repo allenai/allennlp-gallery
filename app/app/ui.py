@@ -8,7 +8,7 @@ def create_ui() -> Blueprint:
 
     default_title = "AllenNLP Project Gallery"
     default_description = (
-        "A list of publicly available, state-of-the-art paper implementations build with "
+        "A list of publicly available, state-of-the-art paper implementations built with "
         "AllenNLP. The featured projects are developed both by the Allen Institute for AI and "
         "the larger community."
     )
