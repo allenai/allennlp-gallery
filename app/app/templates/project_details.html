@@ -51,7 +51,9 @@
                     </div>
                     <div class="author-meta">
                         <a href="mailto:{{author.email}}">{{ author.email }}</a><br>
-                        {{ author.affiliation }}<br>
+                        {% if author.affiliation is not none: %}
+                            {{ author.affiliation }}
+                        {% endif %}
                     </div>
                     <div class="flex-row author-contact-info">
                         {% if author.twitter: %}
