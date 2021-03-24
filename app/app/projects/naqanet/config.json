@@ -28,7 +28,12 @@
   "submission_date": "2021-03-23",
   "github_link": "https://github.com/nitishgupta/nmn-drop",
   "demo_link": "https://demo.allennlp.org/reading-comprehension",
-  "paper_link": "https://api.semanticscholar.org/CorpusID:5276660",
+  "papers": [
+    {
+      "title": "Neural Module Networks",
+      "link": "https://api.semanticscholar.org/CorpusID:5276660"
+    }
+  ],
   "allennlp_version": "2.1.0",
   "supported_languages": ["en"],
   "datasets": [

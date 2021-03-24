@@ -29,44 +29,44 @@
     </p>
     <p>
         You can submit your project by
-        <strong><a href="{{ url_for("app.add_model") }}">creating an issue.</a></strong>
+        <strong><a href="{{ url_for("app.add_project") }}">creating an issue.</a></strong>
     </p>
 </div>
 
 <hr>
 
-<h2 class="model-list-title">Projects</h2>
-<ul class="layout-list model-list">
-    {% for model in models: %}
+<h2 class="project-list-title">Projects</h2>
+<ul class="layout-list project-list">
+    {% for project in projects: %}
         <li>
-            <a href="{{ url_for('app.model_details', model_id=model.id) }}">
-                <span class="model-list-model-title brand-font">
-                    {{ model.config.title }}
+            <a href="{{ url_for('app.project_details', project_id=project.id) }}">
+                <span class="project-list-project-title brand-font">
+                    {{ project.config.title }}
                 </span>
-                <span class="flex-row model-list-model-meta">
-                    <ul class="layout-list model-list-model-authors">
-                        {% for author in model.config.authors: %}
+                <span class="flex-row project-list-project-meta">
+                    <ul class="layout-list project-list-project-authors">
+                        {% for author in project.config.authors: %}
                             <li>{{ author.name }}</li>
                         {% endfor %}
                     </ul>
                     <span class="small-bullet">•</span>
-                    <span class="model-list-model-date">
-                        {{ model.config.submission_date | formatted_date }}
+                    <span class="project-list-project-date">
+                        {{ project.config.submission_date | formatted_date }}
                     </span>
                     <span class="small-bullet">•</span>
-                    <span class="model-list-model-allennlp-version">
-                        AllenNLP v{{ model.config.allennlp_version }}
+                    <span class="project-list-project-allennlp-version">
+                        AllenNLP v{{ project.config.allennlp_version }}
                     </span>
                 </span>
-                <span class="model-list-model-meta">
-                    <ul class="layout-list model-list-model-affiliations">
-                        {% for affilation in model.config.affiliations(): %}
+                <span class="project-list-project-meta">
+                    <ul class="layout-list project-list-project-affiliations">
+                        {% for affilation in project.config.affiliations(): %}
                             <li>{{ affilation }}</li>
                         {% endfor %}
                     </ul>
                 </span>
                 <ul class="layout-list flex-row tag-list">
-                    {% for tag in model.config.tags %}
+                    {% for tag in project.config.tags %}
                         <li><span>{{ tag }}</span></li>
                     {% endfor %}
                 </ul>
