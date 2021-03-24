@@ -12,13 +12,6 @@
             Source Code
         </a>
     </li>
-    {% if project.config.paper_link %}
-        <li>
-            <a class="button small" href="{{ project.config.paper_link }}" rel="noopener,noreferrer">
-                View Paper
-            </a>
-        </li>
-    {% endif %}
     {% if project.config.demo_link %}
         <li>
             <a class="button small" href="{{ project.config.demo_link }}" rel="noopener,noreferrer">
@@ -99,6 +92,20 @@
 
     <div class="meta">
         <ul class="layout-list meta-list">
+            {% if project.config.papers | length > 0: %}
+                <li class="papers">
+                    <strong>Related Papers:</strong>
+                    <ul class="layout-list paper-list">
+                        {% for paper in project.config.papers %}
+                            <li>
+                                <a href="{{ paper.link }}" rel="noreferrer,noopener">
+                                    {{ paper.title }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endif %}
             <li class="tags">
                 <strong>Tags:</strong>
                 <ul class="layout-list flex-row tag-list">

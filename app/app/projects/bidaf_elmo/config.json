@@ -41,7 +41,12 @@
   "submission_date": "2021-03-23",
   "github_link": "https://github.com/allenai/allennlp-models/blob/main/training_config/rc/bidaf_elmo.jsonnet",
   "demo_link": "https://demo.allennlp.org/reading-comprehension",
-  "paper_link": "https://api.semanticscholar.org/CorpusID:3994096",
+  "papers": [
+    {
+      "title": "AllenNLP: A Deep Semantic Natural Language Processing Platform",
+      "link": "https://api.semanticscholar.org/CorpusID:3994096"
+    }
+  ],
   "allennlp_version": "2.1",
   "supported_languages": ["en"],
   "datasets": [

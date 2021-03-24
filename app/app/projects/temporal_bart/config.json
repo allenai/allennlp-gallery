@@ -25,7 +25,12 @@
   ],
   "submission_date": "2021-01-10",
   "github_link": "https://github.com/jjasonn0717/TemporalBART",
-  "paper_link": "https://arxiv.org/abs/2012.15786",
+  "papers": [
+    {
+      "title": "Conditional Generation of Temporally-ordered Event Sequences",
+      "link": "https://arxiv.org/abs/2012.15786"
+    }
+  ],
   "allennlp_version": "1.1.0",
   "datasets": [
     {

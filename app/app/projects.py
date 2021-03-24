@@ -42,6 +42,16 @@ class Dataset:
     def from_dict(obj: dict) -> 'Dataset':
         return Dataset(obj["name"], obj["link"])
 
+
+@dataclass(frozen=True)
+class Paper:
+    title: str
+    link: str
+
+    @staticmethod
+    def from_dict(obj: dict) -> 'Paper':
+        return Paper(obj["title"], obj["link"])
+
 @dataclass(frozen=True)
 class ProjectConfig:
     title: str
@@ -52,7 +62,7 @@ class ProjectConfig:
     datasets: List[Dataset] = field(default_factory=list)
     tags: List[str] = field(default_factory=list)
     supported_languages: List[str] = field(default_factory=list)
-    paper_link: Optional[str] = None
+    papers: List[Paper] = field(default_factory=list)
     demo_link: Optional[str] = None
 
     def affiliations(self) -> Set[str]:
@@ -72,7 +82,7 @@ class ProjectConfig:
                            [ Dataset.from_dict(d) for d in obj.get("datasets", []) ],
                            obj.get("tags", []),
                            obj.get("supported_languages", []),
-                           obj.get("paper_link"),
+                           [ Paper.from_dict(p) for p in obj.get("papers", []) ],
                            obj.get("demo_link"))
 
 @dataclass(frozen=True)

@@ -23,7 +23,12 @@
   ],
   "submission_date": "2021-02-02",
   "github_link": "https://github.com/RikVN/Neural_DRS",
-  "paper_link": "https://www.aclweb.org/anthology/2020.emnlp-main.371.pdf",
+  "papers": [
+    {
+      "title": "Character-level Representations Improve DRS-based Semantic Parsing Even in the Age of BERT",
+      "link": "https://www.aclweb.org/anthology/2020.emnlp-main.371.pdf"
+    }
+  ],
   "allennlp_version": "0.9.0",
   "datasets": [
     {

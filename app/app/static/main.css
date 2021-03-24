@@ -185,7 +185,8 @@
         border-bottom: 1px solid var(--palette-border-default);
     }
 
-    .meta-list li.tags {
+    .meta-list li.tags,
+    .meta-list li.papers {
         grid-column-start: 1;
         grid-column-end: 3;
     }
@@ -210,6 +211,12 @@
         padding: var(--spacing-xs2) var(--spacing-xs);
         color: var(--color-b8);
         line-height: 1;
+    }
+
+    .paper-list { 
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xs);
     }
 
     @media (max-width: 425px) {
