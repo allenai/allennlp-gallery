@@ -235,20 +235,22 @@
 /* Author List */
 
     .author-list {
-        align-items: stretch;
-        margin: var(--spacing-xl) 0 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: var(--spacing-md);
+        row-gap: var(--spacing-lg);
         font-size: var(--typography-text-styles-small-font-size);
-    }
-
-    .author-list > li:not(:last-child) {
-        margin-right: var(--spacing-lg);
     }
 
     .author-list li {
         display: grid;
-        width: 195px;
         grid-template-rows: min-content 1fr min-content;
         gap: var(--spacing-sm);
+    }
+
+    .author-meta {
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .author-name-and-photo {

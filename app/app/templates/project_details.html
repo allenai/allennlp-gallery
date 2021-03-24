@@ -33,7 +33,7 @@
 
 <div class="details-columns">
     <div class="main">
-        <ul class="layout-list flex-row author-list">
+        <ul class="layout-list author-list">
             {% for author in project.config.authors: %}
                 <li>
                     <div class="author-name-and-photo">
@@ -50,7 +50,7 @@
                         <strong>{{ author.name }}</strong>
                     </div>
                     <div class="author-meta">
-                        <a href="mailto:{{author.email}}">{{ author.email }}</a><br>
+                        <a href="mailto:{{author.email}}" title="{{ author.email }}">{{ author.email }}</a><br>
                         {% if author.affiliation is not none: %}
                             {{ author.affiliation }}
                         {% endif %}
