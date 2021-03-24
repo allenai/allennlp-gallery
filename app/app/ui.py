@@ -24,7 +24,8 @@ def create_ui() -> Blueprint:
 
     @app.route("/")
     def index():
-        projects = load_all_projects()
+        projects = sorted(load_all_projects(), key=lambda p : p.config.submission_date)
+        projects.reverse()
         return render_template("index.html", projects=projects, title=default_title,
                                 description=default_description)
 
