@@ -11,6 +11,6 @@ separate modeling logic to predict that answer type. We then marginalize over
 all possible ways of getting to the right answer through each of these answer types.
 
 This model is maintained by the AllenNLP team and its contributors on the AllenNLP
-models repository at https://github.com/allenai/allennlp-models.
+models repository at [https://github.com/allenai/allennlp-models](https://github.com/allenai/allennlp-models).
 
 It achieves 51% F1 and 47% exact match on the DROP validation set.
