@@ -14,6 +14,14 @@
         line-height: var(--line-height);
     }
 
+    .max-width-copy {
+        max-width: 70ch;
+    }
+
+    .centered {
+        margin: 0 auto;
+    }
+
     .bg-white {
         background: #fff;
     }
@@ -68,7 +76,7 @@
 
     a[href].button.large,
     .button.large {
-        padding: var(--spacing-lg) var(--spacing-lg);
+        padding: var(--spacing-sm) var(--spacing-lg);
         font-size: var(--typography-text-styles-big-font-size);
     }
 
@@ -141,14 +149,14 @@
     }
 
 /* Lists*/
-    
+
     /* A "layout" list is one that's used for layout purposes, wherein the default styles
        are reset / removed. */
     .layout-list {
         list-style-type: none;
     }
 
-    .layout-list { 
+    .layout-list {
         padding: 0;
         margin: 0;
     }
@@ -302,7 +310,7 @@
             margin: 0 0 var(--spacing-md);
         }
     }
-    
+
 /* Model Details */
 
     .details-title {
@@ -318,6 +326,7 @@
         gap: var(--spacing-xl);
     }
 
+    .big-text,
     .details-columns .main {
         font-size: var(--typography-text-styles-big-font-size);
     }
@@ -347,7 +356,7 @@
         background: linear-gradient(to bottom,
                                     var(--color-b6),
                                     var(--color-b9) 90%);
-    } 
+    }
 
     .hero-content {
         display: flex;
@@ -396,7 +405,7 @@
     }
 
 /* Home Page */
-    
+
     .intro {
         font-size: var(--typography-text-styles-jumbo-font-size);
     }
@@ -409,7 +418,7 @@
 
 
 /* Model List */
-    
+
     .model-list-title {
         margin: var(--spacing-xl) 0 var(--spacing-xs);
     }
@@ -440,7 +449,7 @@
     }
 
     .model-list-model-meta > *:not(:last-child) {
-        margin-right: 1ch;        
+        margin-right: 1ch;
     }
 
     .model-list-model-meta,
@@ -475,8 +484,8 @@
     .model-list-model-authors > li:not(:last-child) {
         margin-right: 0.5ch;
     }
-    
-    .model-list-model-affiliations > li:not(:last-child):after, 
+
+    .model-list-model-affiliations > li:not(:last-child):after,
     .model-list-model-authors > li:not(:last-child):after {
         content: ",";
     }
