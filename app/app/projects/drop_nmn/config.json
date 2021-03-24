@@ -1,0 +1,25 @@
+{
+  "title": "Neural Module Networks for Reasoning over Text",
+  "authors": [
+    {
+      "name": "Nitish Gupta",
+      "twitter": "@nitish_gup",
+      "email": "nitishg@allenai.org",
+      "s2_author_page": "https://www.semanticscholar.org/author/Nitish-Gupta/2285178",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=STiAua8AAAAJ"
+    }
+  ],
+  "submission_date": "2021-03-24",
+  "github_link": "https://github.com/nitishgupta/nmn-drop",
+  "demo_link": "https://demo.allennlp.org/reading-comprehension",
+  "paper_link": "https://api.semanticscholar.org/CorpusID:209202200",
+  "allennlp_version": "1.0.0",
+  "supported_languages": ["en"],
+  "datasets": [
+    {
+      "name": "DROP",
+      "link": "https://allennlp.org/drop"
+    }
+  ],
+  "tags": ["drop", "nmn", "qa", "reading comprehension", "question answering"]
+}
