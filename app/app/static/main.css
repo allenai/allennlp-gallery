@@ -421,7 +421,7 @@
 /* Home Page */
 
     .intro {
-        font-size: var(--typography-text-styles-jumbo-font-size);
+        font-size: var(--typography-text-styles-big-font-size);
     }
 
     @media (max-width: 425px) {
