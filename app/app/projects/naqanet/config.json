@@ -1,5 +1,5 @@
 {
-  "title": "Neural Module Network",
+  "title": "Numerically Augmented QA Net",
   "authors": [
     {
       "name": "Mark Neumann",
@@ -26,12 +26,12 @@
     }
   ],
   "submission_date": "2021-03-23",
-  "github_link": "https://github.com/nitishgupta/nmn-drop",
+  "github_link": "https://github.com/allenai/allennlp-models/blob/main/training_config/rc/qanet.jsonnet",
   "demo_link": "https://demo.allennlp.org/reading-comprehension",
   "papers": [
     {
-      "title": "Neural Module Networks",
-      "link": "https://api.semanticscholar.org/CorpusID:5276660"
+      "title": "DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs",
+      "link": "https://api.semanticscholar.org/CorpusID:67855846"
     }
   ],
   "allennlp_version": "2.1.0",
@@ -42,5 +42,5 @@
       "link": "https://allennlp.org/drop"
     }
   ],
-  "tags": ["drop", "naqanet", "qa", "reading comprehension", "question answering"]
+  "tags": ["drop", "naqanet", "qanet", "qa", "reading comprehension", "question answering"]
 }
