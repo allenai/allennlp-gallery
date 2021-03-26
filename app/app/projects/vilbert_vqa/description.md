@@ -1,4 +1,4 @@
-This work implements the VQA task on VilBERT. It does not reproduce the pre-training regime
+This work implements the VQA task with ViLBERT. It does not reproduce the pre-training regime
 that the original paper goes through, and as such, does not reproduce the scores from the paper.
 
 It achieves 41% F1 and 52% VQA. If you want to produce SOTA scores with this model, please
