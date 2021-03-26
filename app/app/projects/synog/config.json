@@ -7,12 +7,6 @@
       "email": "kdhole@ipsoft.com",
       "s2_author_page": "https://www.semanticscholar.org/author/Kaustubh-D.-Dhole/4834571",
       "google_scholar_author_page": "https://scholar.google.com/citations?hl=en&user=xSGbQ3oAAAAJ"
-    }, {
-      "name": "Christopher D. Manning",
-      "twitter": "@chrmanning",
-      "email": "manning@stanford.edu",
-      "s2_author_page": "https://www.semanticscholar.org/author/Christopher-D.-Manning/144783904",
-      "google_scholar_author_page": "https://scholar.google.com/citations?user=1zmDOdwAAAAJ"
     }
   ],
   "submission_date": "2021-03-26",
@@ -27,11 +21,11 @@
   "supported_languages": ["en"],
   "datasets": [
     {
-      "name": "SQuAD 1.1",
-      "link": "https://rajpurkar.github.io/SQuAD-explorer/explore/1.1/dev/"
+      "name": "PropBank",
+      "link": "https://propbank.github.io"
     }, {
-      "name": "SQuAD 2.0",
-      "link": "https://rajpurkar.github.io/SQuAD-explorer/explore/v2.0/dev/"
+      "name": "VerbNet",
+      "link": "https://verbs.colorado.edu/verbnet/"
     }
   ],
   "tags": ["question generation"]
