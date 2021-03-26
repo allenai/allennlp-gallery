@@ -1,0 +1,30 @@
+{
+  "title": "MOCHA: A Dataset for Training and Evaluating Generative Reading Comprehension Metrics",
+  "authors": [
+    {
+      "name": "Anthony Chen",
+      "twitter": "@_anthonychen",
+      "email": "anthonc9@uci.edu",
+      "s2_author_page": "https://www.semanticscholar.org/author/Anthony-Chen/52151521",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=n3PSuQMAAAAJ"
+    }
+  ],
+  "submission_date": "2021-03-25",
+  "github_link": "https://github.com/anthonywchen/MOCHA",
+  "demo_link": "https://allennlp.org/mocha",
+  "papers": [
+    {
+      "title": "MOCHA: A Dataset for Training and Evaluating Generative Reading Comprehension Metrics",
+      "link": "https://api.semanticscholar.org/CorpusID:222208714"
+    }
+  ],
+  "allennlp_version": "1.1.0",
+  "supported_languages": ["en"],
+  "datasets": [
+    {
+      "name": "MOCHA",
+      "link": "https://allennlp.org/mocha"
+    }
+  ],
+  "tags": ["generation", "reading comprehension", "question answering"]
+}

@@ -1,0 +1,41 @@
+{
+  "title": "ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks",
+  "authors": [
+       {
+      "name": "Akshita Bhagia",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "email": "akshitab@allenai.org"
+    }, {
+      "name": "Dirk Groeneveld",
+      "photo_url": "https://robohash.org/mechanicaldirk.png?bgset=bg1",
+      "twitter": "@mechanicaldirk",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "email": "dirkg@allenai.org",
+      "s2_author_page": "https://www.semanticscholar.org/author/Dirk-Groeneveld/3458736",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=KEhvGNMAAAAJ"
+    }, {
+      "name": "Pete Walsh",
+      "twitter": "@epwalsh10",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "email": "petew@allenai.org"
+    }
+  ],
+  "submission_date": "2021-03-25",
+  "github_link": "https://github.com/allenai/allennlp-models/blob/main/training_config/vision/vilbert_vqa_pretrained_bert_large.jsonnet",
+  "demo_link": "https://demo.allennlp.org/visual-question-answering",
+  "papers": [
+    {
+      "title": "ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks",
+      "link": "https://api.semanticscholar.org/CorpusID:199453025"
+    }
+  ],
+  "allennlp_version": "2.1",
+  "supported_languages": ["en"],
+  "datasets": [
+    {
+      "name": "VQAv2",
+      "link": "https://visualqa.org"
+    }
+  ],
+  "tags": ["vqa", "vilbert", "qa", "vision", "question answering"]
+}

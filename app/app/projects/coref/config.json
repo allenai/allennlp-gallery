@@ -1,0 +1,32 @@
+{
+  "title": "Higher-order Coreference Resolution with Coarse-to-fine Inference",
+  "authors": [
+    {
+      "name": "Zhaofeng Wu",
+      "twitter": "@zhaofeng_wu",
+      "email": "zfw7@cs.washington.edu",
+      "s2_author_page": "https://www.semanticscholar.org/author/Zhaofeng-Wu/47039405"
+    }
+  ],
+  "submission_date": "2021-03-25",
+  "github_link": "https://github.com/allenai/allennlp-models/blob/main/training_config/coref/coref_spanbert_large.jsonnet",
+  "demo_link": "https://demo.allennlp.org/coreference-resolution",
+  "papers": [
+    {
+      "title": "Higher-order Coreference Resolution with Coarse-to-fine Inference",
+      "link": "https://api.semanticscholar.org/CorpusID:4891749"
+    }, {
+      "title": "SpanBERT: Improving Pre-training by Representing and Predicting Spans",
+      "link": "https://api.semanticscholar.org/CorpusID:198229624"
+    }
+  ],
+  "allennlp_version": "2.1.0",
+  "supported_languages": ["en"],
+  "datasets": [
+    {
+      "name": "CoNLL 2012",
+      "link": "https://cemantix.org/conll/2012/introduction.html"
+    }
+  ],
+  "tags": ["conll", "coref", "coreference resolution", "spanbert"]
+}
