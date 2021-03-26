@@ -16,11 +16,11 @@
       "email": " dcard@cmu.edu",
       "affiliation": "Machine Learning Department, Carnegie Mellon University",
       "google_scholar_author_page": "https://scholar.google.com/citations?user=qH-rJV8AAAAJ&hl=en"
-    },  {
+    }, {
       "name": "Noah A. Smith",
       "email": " nasmith@cs.washington.edu",
       "affiliation": "The University of Washington, Seattle",
-      "google_scholar_author_page": "https://scholar.google.com/citations?user=TjdFs3EAAAAJ&hl=en"
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=TjdFs3EAAAAJ&hl=en",
       "s2_author_page": "https://www.semanticscholar.org/author/Noah-A.-Smith/144365875"
     }
   ],
@@ -32,8 +32,7 @@
     {
       "name": "AG News",
       "link": "https://github.com/allenai/vampire/blob/master/scripts/download_ag.sh"
-    },
-    {
+    }, {
       "name": "IMDB dataset",
       "link": "https://github.com/allenai/vampire/blob/master/scripts/download_imdb.sh"
     }
