@@ -1,0 +1,32 @@
+{
+  "title": "Truecaser",
+  "authors": [
+    {
+      "name": "Stephen Mayhew",
+      "twitter": "@mayhewsw",
+      "email": "mayhew@seas.upenn.edu",
+      "s2_author_page": "https://www.semanticscholar.org/author/Stephen-Mayhew/2153374",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=-uLaJq4AAAAJ"
+    }
+  ],
+  "submission_date": "2021-03-26",
+  "github_link": "https://github.com/mayhewsw/pytorch-truecaser",
+  "papers": [
+    {
+      "title": "Learning to Capitalize with Character-Level Recurrent Neural Networks: An Empirical Study",
+      "link": "https://api.semanticscholar.org/CorpusID:18021407"
+    }, {
+      "title": "Simple English Wikipedia: A New Text Simplification Task",
+      "link": "https://api.semanticscholar.org/CorpusID:9128245"
+    }
+  ],
+  "allennlp_version": "0.8.2",
+  "supported_languages": ["en"],
+  "datasets": [
+    {
+      "name": "Simple English Wikipedia Split",
+      "link": "http://www.cs.pomona.edu/~dkauchak/simplification/data.v1/data.v1.split.tar.gz"
+    }
+  ],
+  "tags": ["truecaser", "simple wikipedia"]
+}
