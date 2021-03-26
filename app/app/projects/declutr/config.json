@@ -1,0 +1,34 @@
+{
+  "title": "DeCLUTR: Deep Contrastive Learning for Unsupervised Textual Representations",
+  "authors": [
+    {
+      "name": "John Giorgi",
+      "twitter": "@JohnMGiorgi",
+      "email": "johnmgiorgi@gmail.com",
+      "s2_author_page": "https://www.semanticscholar.org/author/John-Michael-Giorgi/37585306",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=TNFEhK4AAAAJ"
+    }, {
+      "name": "Osvald Nitski",
+      "twitter": "@OsvaldNitski",
+      "s2_author_page": "https://www.semanticscholar.org/author/Osvald-Nitski/1739735954",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=jja0m-gAAAAJ"
+    }
+  ],
+  "submission_date": "2021-03-26",
+  "github_link": "https://github.com/JohnGiorgi/DeCLUTR",
+  "papers": [
+    {
+      "title": "DeCLUTR: Deep Contrastive Learning for Unsupervised Textual Representations",
+      "link": "https://api.semanticscholar.org/CorpusID:219530980"
+    }
+  ],
+  "allennlp_version": "1.1.0",
+  "supported_languages": ["en"],
+  "datasets": [
+    {
+      "name": "OpenWebText",
+      "link": "https://github.com/jcpeterson/openwebtext"
+    }
+  ],
+  "tags": ["sentence embeddings", "metric learning"]
+}
