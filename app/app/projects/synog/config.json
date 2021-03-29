@@ -1,0 +1,32 @@
+{
+  "title": "Syn-QG: Syntactic and Shallow Semantic Rules for Question Generation",
+  "authors": [
+    {
+      "name": "Kaustubh D. Dhole",
+      "twitter": "@KaustubhDhole",
+      "email": "kdhole@ipsoft.com",
+      "s2_author_page": "https://www.semanticscholar.org/author/Kaustubh-D.-Dhole/4834571",
+      "google_scholar_author_page": "https://scholar.google.com/citations?hl=en&user=xSGbQ3oAAAAJ"
+    }
+  ],
+  "submission_date": "2021-03-26",
+  "github_link": "https://bitbucket.org/kaustubhdhole/syn-qg/src/master/",
+  "papers": [
+    {
+      "title": "Syn-QG: Syntactic and Shallow Semantic Rules for Question Generation",
+      "link": "https://api.semanticscholar.org/CorpusID:215828433"
+    }
+  ],
+  "allennlp_version": "0.9",
+  "supported_languages": ["en"],
+  "datasets": [
+    {
+      "name": "PropBank",
+      "link": "https://propbank.github.io"
+    }, {
+      "name": "VerbNet",
+      "link": "https://verbs.colorado.edu/verbnet/"
+    }
+  ],
+  "tags": ["question generation"]
+}

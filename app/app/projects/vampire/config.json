@@ -1,0 +1,41 @@
+{
+  "title": "Variational Pretraining for Semi-supervised Text Classification",
+  "authors": [
+    {
+      "name": "Suchin Gururangank",
+      "email": "suching@allenai.org",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=CJIKhNIAAAAJ",
+      "s2_author_page": "https://www.semanticscholar.org/author/Suchin-Gururangan/40895369"
+    }, {
+      "name": "Tam Dang",
+      "email": "dangt7@cs.washington.edu",
+      "affiliation": "University of Washington, Seattle"
+    }, {
+      "name": "Dallas Card",
+      "email": " dcard@cmu.edu",
+      "affiliation": "Machine Learning Department, Carnegie Mellon University",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=qH-rJV8AAAAJ"
+    }, {
+      "name": "Noah A. Smith",
+      "email": " nasmith@cs.washington.edu",
+      "affiliation": "University of Washington, Seattle",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=TjdFs3EAAAAJ",
+      "s2_author_page": "https://www.semanticscholar.org/author/Noah-A.-Smith/144365875"
+    }
+  ],
+  "submission_date": "2012-03-26",
+  "github_link": "https://github.com/allenai/vampire",
+  "paper_link": "https://arxiv.org/abs/1906.02242",
+  "allennlp_version": "0.9.0",
+  "datasets": [
+    {
+      "name": "AG News",
+      "link": "https://github.com/allenai/vampire/blob/master/scripts/download_ag.sh"
+    }, {
+      "name": "IMDB dataset",
+      "link": "https://github.com/allenai/vampire/blob/master/scripts/download_imdb.sh"
+    }
+  ],
+  "tags": ["variational inference", "pretraining", "classification"]
+}
