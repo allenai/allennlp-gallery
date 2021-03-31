@@ -1,0 +1,27 @@
+{
+  "title": "Unsupervised Transfer of Semantic Role Models from Verbal to Nominal Domain",
+  "authors": [
+    {
+      "name": "Yanpeng Zhao",
+      "email": "yanp.zhao@ed.ac.uk",
+      "affiliation": "University of Edinburgh",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=-T9FigIAAAAJ"
+    }, {
+      "name": "Ivan Titov",
+      "email": "ititov@inf.ed.ac.uk",
+      "affiliation": "University of Edinburgh & University of Amsterdam",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=FKUc3vsAAAAJ"
+    }
+  ],
+  "submission_date": "2020-09-26",
+  "github_link": "https://github.com/zhaoyanpeng/srltransfer",
+  "paper_link": "https://arxiv.org/abs/2005.00278",
+  "allennlp_version": "0.8.2",
+  "datasets": [
+    {
+      "name": "srl_v2n",
+      "link": "https://github.com/zhaoyanpeng/srltransfer"
+    }
+  ],
+  "tags": ["transfer learning", "semantic role labeling"]
+}
