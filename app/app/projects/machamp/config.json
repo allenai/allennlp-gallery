@@ -1,0 +1,53 @@
+{
+  "title": "Challenges in Annotating and Parsing Spoken, Code-switched, Frisian-Dutch Data",
+  "authors": [
+    {
+      "name": "Rob van der Goot",
+      "email": "robv@itu.dk",
+      "affiliation": "IT University of Copenhagen"
+    },
+    {
+      "name": "Ahmet Üstün",
+      "email": "a.ustun@rug.nl",
+      "affiliation": "University of Groningen"
+    },
+    {
+      "name": "Alan Ramponi",
+      "email": "alan.ramponi@unitn.it",
+      "affiliation": "University of Trento"
+    },
+    {
+      "name": "Ibrahim Sharaf",
+      "email": "ibrahim.sharaf@factmata.com",
+      "affiliation": "Factmata"
+    },
+    {
+      "name": "Barbara Plank",
+      "email": "bapl@itu.dk",
+      "affiliation": "IT University of Copenhagen"
+    }
+  ],
+  "submission_date": "2021-03-30",
+  "github_link": "https://github.com/machamp-nlp/machamp",
+  "paper_link": "https://arxiv.org/pdf/2005.14672.pdf",
+  "allennlp_version": "1.3",
+  "datasets": [
+    {
+      "name": "GLUE",
+      "link": "https://gluebenchmark.com/"
+    },
+    {
+      "name": "UD",
+      "link": "https://universaldependencies.org/"
+    },
+    {
+      "name": "WMT14",
+      "link": "https://nlp.stanford.edu/projects/nmt/"
+    },
+    {
+      "name": "IWSLT15",
+      "link": "https://nlp.stanford.edu/projects/nmt/"
+    }
+  ],
+  "tags": ["MTL", "Multi-task learning", "sequence labeling", "dependency parsing", "text generation", "masked language modeling"]
+}
