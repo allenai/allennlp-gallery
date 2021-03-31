@@ -3,6 +3,7 @@
   "authors": [
        {
       "name": "Akshita Bhagia",
+      "photo_url": "https://avatars.githubusercontent.com/u/6500683",
       "affiliation": "Allen Institute for Artificial Intelligence",
       "email": "akshitab@allenai.org"
     }, {
@@ -15,6 +16,7 @@
       "google_scholar_author_page": "https://scholar.google.com/citations?user=KEhvGNMAAAAJ"
     }, {
       "name": "Pete Walsh",
+      "photo_url": "https://avatars.githubusercontent.com/u/8812459",
       "twitter": "@epwalsh10",
       "affiliation": "Allen Institute for Artificial Intelligence",
       "email": "petew@allenai.org"
@@ -29,7 +31,7 @@
       "link": "https://api.semanticscholar.org/CorpusID:199453025"
     }
   ],
-  "allennlp_version": "2.1",
+  "allennlp_version": ">=2.0",
   "supported_languages": ["en"],
   "datasets": [
     {

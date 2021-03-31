@@ -1,0 +1,24 @@
+{
+  "title": "CopyNet",
+  "authors": [
+    {
+      "name": "Pete Walsh",
+      "photo_url": "https://avatars.githubusercontent.com/u/8812459",
+      "twitter": "@epwalsh10",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "email": "petew@allenai.org"
+    }
+  ],
+  "submission_date": "2021-03-31",
+  "github_link": "https://github.com/allenai/allennlp-models/blob/main/allennlp_models/generation/models/copynet.py",
+  "papers": [
+    {
+      "title": "Incorporating Copying Mechanism in Sequence-to-Sequence Learning",
+      "link": "https://api.semanticscholar.org/CorpusID:8174613"
+    }
+  ],
+  "allennlp_version": ">=1.0",
+  "supported_languages": ["n/a"],
+  "datasets": [],
+  "tags": ["generation", "seq2seq"]
+}

@@ -1,0 +1,43 @@
+{
+  "title": "BART",
+  "authors": [
+    {
+      "name": "Tobias Rohde",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "email": "tobiasr@allenai.org"
+    },
+    {
+      "name": "Dirk Groeneveld",
+      "photo_url": "https://robohash.org/mechanicaldirk.png?bgset=bg1",
+      "twitter": "@mechanicaldirk",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "email": "dirkg@allenai.org",
+      "s2_author_page": "https://www.semanticscholar.org/author/Dirk-Groeneveld/3458736",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=KEhvGNMAAAAJ"
+    },
+    {
+      "name": "Pete Walsh",
+      "photo_url": "https://avatars.githubusercontent.com/u/8812459",
+      "twitter": "@epwalsh10",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "email": "petew@allenai.org"
+    }
+  ],
+  "submission_date": "2021-03-31",
+  "github_link": "https://github.com/allenai/allennlp-models/blob/main/training_config/generation/bart_cnn_dm.jsonnet",
+  "papers": [
+    {
+      "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+      "link": "https://api.semanticscholar.org/CorpusID:204960716"
+    }
+  ],
+  "allennlp_version": ">=1.0",
+  "supported_languages": ["en"],
+  "datasets": [
+    {
+      "name": "CNN / DailyMail",
+      "link": "https://github.com/abisee/cnn-dailymail"
+    }
+  ],
+  "tags": ["generation", "transformers", "summarization"]
+}
