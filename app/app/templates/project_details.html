@@ -43,12 +43,18 @@
                         {% endif %}
                         <strong>{{ author.name }}</strong>
                     </div>
-                    <div class="author-meta">
-                        <a href="mailto:{{author.email}}" title="{{ author.email }}">{{ author.email }}</a><br>
-                        {% if author.affiliation is not none: %}
-                            {{ author.affiliation }}
-                        {% endif %}
-                    </div>
+                    {% if author.email is not none or author.affiliation is not none: %}
+                        <div class="author-meta">
+                            {% if author.email is not none: %}
+                                <a href="mailto:{{author.email}}" title="{{ author.email }}">
+                                    {{ author.email }}
+                                </a><br>
+                            {% endif %}
+                            {% if author.affiliation is not none: %}
+                                {{ author.affiliation }}
+                            {% endif %}
+                        </div>
+                    {% endif %}
                     <div class="flex-row author-contact-info">
                         {% if author.twitter: %}
                             <a href="https://twitter.com/{{ author.twitter}}" rel="noopener,noreferrer"se.>
