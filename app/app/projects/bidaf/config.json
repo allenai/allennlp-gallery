@@ -30,7 +30,7 @@
       "link": "https://api.semanticscholar.org/CorpusID:3994096"
     }
   ],
-  "allennlp_version": "2.1",
+  "allennlp_version": ">=1.0",
   "supported_languages": ["en"],
   "datasets": [
     {

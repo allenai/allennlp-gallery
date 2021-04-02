@@ -1,11 +1,11 @@
 import json
-
 from dataclasses import dataclass, field
 from typing import Optional, List, Set
 from datetime import date, datetime
 from pathlib import Path
 from os import listdir
 from logging import getLogger
+
 
 @dataclass(frozen=True)
 class Author:
@@ -18,20 +18,23 @@ class Author:
     google_scholar_author_page: Optional[str] = None
 
     def initials(self) -> str:
-        parts = [ n[0] for n in self.name.split(' ') ]
+        parts = [n[0] for n in self.name.split(" ")]
         if len(parts) < 2:
             return parts[0]
-        return ''.join(parts[0] + parts[-1])
+        return "".join(parts[0] + parts[-1])
 
     @staticmethod
-    def from_dict(obj: dict) -> 'Author':
-        return Author(obj["name"],
-                      obj.get("affiliation"),
-                      obj.get("email"),
-                      obj.get("photo_url"),
-                      obj.get("twitter"),
-                      obj.get("s2_author_page"),
-                      obj.get("google_scholar_author_page"))
+    def from_dict(obj: dict) -> "Author":
+        return Author(
+            obj["name"],
+            obj.get("affiliation"),
+            obj.get("email"),
+            obj.get("photo_url"),
+            obj.get("twitter"),
+            obj.get("s2_author_page"),
+            obj.get("google_scholar_author_page"),
+        )
+
 
 @dataclass(frozen=True)
 class Dataset:
@@ -39,7 +42,7 @@ class Dataset:
     link: str
 
     @staticmethod
-    def from_dict(obj: dict) -> 'Dataset':
+    def from_dict(obj: dict) -> "Dataset":
         return Dataset(obj["name"], obj["link"])
 
 
@@ -49,8 +52,9 @@ class Paper:
     link: str
 
     @staticmethod
-    def from_dict(obj: dict) -> 'Paper':
+    def from_dict(obj: dict) -> "Paper":
         return Paper(obj["title"], obj["link"])
+
 
 @dataclass(frozen=True)
 class ProjectConfig:
@@ -73,17 +77,20 @@ class ProjectConfig:
         }
 
     @staticmethod
-    def from_dict(obj: dict) -> 'ProjectConfig':
-        return ProjectConfig(obj["title"],
-                           [ Author.from_dict(a) for a in obj["authors"] ],
-                           datetime.strptime(obj["submission_date"], "%Y-%m-%d").date(),
-                           obj["github_link"],
-                           obj["allennlp_version"],
-                           [ Dataset.from_dict(d) for d in obj.get("datasets", []) ],
-                           obj.get("tags", []),
-                           obj.get("supported_languages", []),
-                           [ Paper.from_dict(p) for p in obj.get("papers", []) ],
-                           obj.get("demo_link"))
+    def from_dict(obj: dict) -> "ProjectConfig":
+        return ProjectConfig(
+            obj["title"],
+            [Author.from_dict(a) for a in obj["authors"]],
+            datetime.strptime(obj["submission_date"], "%Y-%m-%d").date(),
+            obj["github_link"],
+            obj["allennlp_version"],
+            [Dataset.from_dict(d) for d in obj.get("datasets", [])],
+            obj.get("tags", []),
+            obj.get("supported_languages", []),
+            [Paper.from_dict(p) for p in obj.get("papers", [])],
+            obj.get("demo_link"),
+        )
+
 
 @dataclass(frozen=True)
 class Project:
@@ -92,10 +99,12 @@ class Project:
     description: str
 
     @staticmethod
-    def from_dict(id: str, config: dict, description: str) -> 'Project':
+    def from_dict(id: str, config: dict, description: str) -> "Project":
         return Project(id, ProjectConfig.from_dict(config), description)
 
+
 def load_all_projects() -> List[Project]:
+    logger = getLogger(__name__)
     projects = []
     projects_dir = Path(Path(__file__) / ".." / "projects").resolve()
     for mid in listdir(projects_dir):
@@ -103,11 +112,18 @@ def load_all_projects() -> List[Project]:
         if not path.is_dir:
             continue
         try:
+            logger.info(f"Loading config from {path}")
             with open(path / "config.json") as cf:
                 with open(path / "description.md") as df:
                     projects.append(Project.from_dict(mid, json.load(cf), df.read()))
         except FileNotFoundError as err:
-            logger = getLogger(__name__)
             logger.error(f"Project '{mid}' Skipped: {err}")
             continue
     return projects
+
+
+if __name__ == "__main__":
+    from logging import basicConfig, INFO
+
+    basicConfig(level=INFO)
+    load_all_projects()
