@@ -10,7 +10,7 @@
     }
   ],
   "submission_date": "2021-03-31",
-  "github_link": "https://github.com/allenai/allennlp-models/blob/main/allennlp_models/generation/models/copynet.py",
+  "github_link": "https://github.com/allenai/allennlp-models/blob/main/allennlp_models/generation/models/copynet_seq2seq.py",
   "papers": [
     {
       "title": "Incorporating Copying Mechanism in Sequence-to-Sequence Learning",
