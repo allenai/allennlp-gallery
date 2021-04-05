@@ -1,0 +1,29 @@
+{
+  "title": "Lexical Normalization for Code-switched Data and its Effect on POS Tagging",
+  "authors": [
+    {
+      "name": "Rob van der Goot",
+      "email": "robv@itu.dk",
+      "affiliation": "IT University"
+    }, {
+      "name": "Özlem Çetinoğlu",
+      "email": "ozlem@ims.uni-stuttgart.de",
+      "affiliation": "IMS, University of Stuttgart"
+    }
+  ],
+  "submission_date": "2021-04-01",
+  "github_link": "https://bitbucket.org/robvanderg/csmonoise",
+  "paper_link": "https://arxiv.org/pdf/2006.01175.pdf",
+  "allennlp_version": "1.3",
+  "datasets": [
+    {
+      "name": "Turkish-German Code-switching Normalisation Data",
+      "link": "https://github.com/ozlemcek/TrDeNormData"
+    },
+    {
+      "name": "Indonesian-English Code-switching Normalisation Data",
+      "link": "https://github.com/seelenbrecher/code-mixed-normalization"
+    }
+  ],
+  "tags": ["Lexical normalization", "POS-tagging", "code-switching"]
+}
