@@ -1,0 +1,33 @@
+{
+  "title": "Biomedical Event Extraction as Sequence Labeling",
+  "authors": [
+    {
+      "name": "Alan Ramponi",
+      "email": "ramponi@cosbi.eu",
+      "affiliation": "Centre for Computational and Systems Biology (COSBI) and University of Trento"
+    }, {
+      "name": "Rob van der Goot",
+      "email": "robv@itu.dk",
+      "affiliation": "IT University of Copenhagen"
+    }, {
+      "name": "Rosario Lombardo",
+      "email": "lombardo@cosbi.eu",
+      "affiliation": "Centre for Computational and Systems Biology (COSBI) and University of Trento"
+    }, {
+      "name": "Barbara Plank",
+      "email": "bapl@itu.dk",
+      "affiliation": "IT University of Copenhagen"
+    }
+  ],
+  "submission_date": "2021-04-01",
+  "github_link": "https://github.com/cosbi-research/beesl",
+  "paper_link": "https://www.aclweb.org/anthology/2020.emnlp-main.431.pdf",
+  "allennlp_version": "0.9",
+  "datasets": [
+    {
+      "name": "Genia 2011",
+      "link": "http://2011.bionlp-st.org/home/genia-event-extraction-genia/"
+    }
+  ],
+  "tags": ["Biomedical event extraction", "multi-task learning"]
+}

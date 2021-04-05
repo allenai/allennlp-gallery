@@ -1,0 +1,25 @@
+{
+  "title": "Challenges in Annotating and Parsing Spoken, Code-switched, Frisian-Dutch Data ",
+  "authors": [
+    {
+      "name": "Anouck Braggaar",
+      "email": "a.r.y.braggaar@student.rug.nl",
+      "affiliation": "University of Groningen"
+    }, {
+      "name": "Rob van der Goot",
+      "email": "robv@itu.dk",
+      "affiliation": "IT University of Copenhagen"
+    }
+  ],
+  "submission_date": "2021-04-01",
+  "github_link": "https://github.com/Anouck96/ParsingFrisian",
+  "paper_link": "https://robvanderg.github.io/doc/adapt-nlp2021.2.pdf",
+  "allennlp_version": "1.3",
+  "datasets": [
+    {
+      "name": "UD_Frisian_Dutch-Fame",
+      "link": "https://github.com/UniversalDependencies/UD_Frisian_Dutch-Fame/tree/master"
+    }
+  ],
+  "tags": ["Universal Dependencies", "UD", "Dependency Parsing", "domain adaptation", "cross-lingual", "cross-domain", "data selection", "Code-switching", "spoken", "Frisian"]
+}

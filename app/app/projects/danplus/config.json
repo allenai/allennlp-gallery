@@ -1,0 +1,29 @@
+{
+  "title": "DaN+: Danish Nested Named Entities and Lexical Normalization",
+  "authors": [
+    {
+      "name": "Barbara Plank",
+      "email": "bapl@itu.dk",
+      "affiliation": "IT University of Copenhagen"
+    }, {
+      "name": "Kristian Nørgaard Jensen",
+      "email": "krnj@itu.dk",
+      "affiliation": "IT University of Copenhagen"
+    }, {
+      "name": "Rob van der Goot",
+      "email": "robv@itu.dk",
+      "affiliation": "IT University of Copenhagen"
+    }
+  ],
+  "submission_date": "2021-04-01",
+  "github_link": "https://github.com/bplank/DaNplus",
+  "paper_link": "https://www.aclweb.org/anthology/2020.coling-main.583.pdf",
+  "allennlp_version": "1.1",
+  "datasets": [
+    {
+      "name": "DaN+",
+      "link": "https://github.com/bplank/DaNplus"
+    }
+  ],
+  "tags": ["named entity recognition", "named entity detection", "lexical normalization", "domain adaptation", "Danish"]
+}
