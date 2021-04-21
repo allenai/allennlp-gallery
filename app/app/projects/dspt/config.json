@@ -1,0 +1,66 @@
+{
+  "title": "Don't Stop Pretraining: Adapt Language Models to Domains and Tasks",
+  "authors": [
+    {
+      "name": "Suchin Gururangan",
+      "twitter": "@ssgrn",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "email": "suching@allenai.org",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=CJIKhNIAAAAJ",
+      "s2_author_page": "https://www.semanticscholar.org/author/Suchin-Gururangan/40895369"
+    },
+    {
+      "name": "Ana Marasović",
+      "twitter": "@anmarasovic",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "email": "anam@allenai.org",
+      "s2_author_page": "https://www.semanticscholar.org/author/Ana-Marasović/3451494",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=3W6OnfAAAAAJ"
+    }
+  ],
+  "submission_date": "2021-04-19",
+  "github_link": "https://github.com/allenai/dont-stop-pretraining",
+  "papers": [
+    {
+      "title": "Don't Stop Pretraining: Adapt Language Models to Domains and Tasks",
+      "link": "https://api.semanticscholar.org/CorpusID:216080466"
+    }
+  ],
+  "allennlp_version": "0.8.2",
+  "supported_languages": ["en"],
+  "datasets": [
+    {
+      "name": "ChemProt",
+      "link": "https://biocreative.bioinformatics.udel.edu/news/corpora/chemprot-corpus-biocreative-vi/"
+    },
+    {
+      "name": "RCT",
+      "link": "https://github.com/Franck-Dernoncourt/pubmed-rct"
+    },
+    {
+      "name": "ACL-ARC",
+      "link": "https://web.eecs.umich.edu/~lahiri/acl_arc.html"
+    },
+    {
+      "name": "SciERC",
+      "link": "http://nlp.cs.washington.edu/sciIE/"
+    },
+    {
+      "name": "HyperPartisan",
+      "link": "https://pan.webis.de/semeval19/semeval19-web/"
+    },
+    {
+      "name": "AGNews",
+      "link": "http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html"
+    },
+    {
+      "name": "Helpfulness",
+      "link": "https://github.com/studio-ousia/el-helpfulness-dataset"
+    },
+    {
+      "name": "IMDB",
+      "link": "http://ai.stanford.edu/%7Eamaas/data/sentiment/"
+    }
+  ],
+  "tags": ["pretraining", "transformers"]
+}
