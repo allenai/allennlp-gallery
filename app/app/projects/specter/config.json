@@ -1,0 +1,37 @@
+{
+  "title": "SPECTER: Document-level Representation Learning using Citation-informed Transformers",
+  "authors": [
+    {
+      "name": "Arman Cohan",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "twitter": "@armancohan",
+      "email": "armanc@allenai.org",
+      "s2_author_page": "https://www.semanticscholar.org/author/Arman-Cohan/2527954",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=baI7IY0AAAAJ"
+    }, {
+      "name": "Sergey Feldman",
+      "affiliation": "Allen Institute for Artificial Intelligence",
+      "twitter": "@SergeyFeldman",
+      "email": "sergey@allenai.org",
+      "s2_author_page": "https://www.semanticscholar.org/author/Sergey-Feldman/46411828",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=C6-OMDIAAAAJ"
+    }
+  ],
+  "submission_date": "2021-04-21",
+  "github_link": "https://github.com/allenai/specter",
+  "papers": [
+    {
+      "title": "SPECTER: Document-level Representation Learning using Citation-informed Transformers",
+      "link": "https://api.semanticscholar.org/CorpusID:215768677"
+    }
+  ],
+  "allennlp_version": "0.9.0",
+  "supported_languages": ["en"],
+  "datasets": [
+    {
+      "name": "S2ORC: The Semantic Scholar Open Research Corpus",
+      "link": "https://allenai.org/data/s2orc"
+    }
+  ],
+  "tags": ["transformer", "document representation", "scidocs", "document classification", "topic classification", "citation prediction", "recommendation"]
+}
