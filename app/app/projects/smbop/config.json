@@ -1,0 +1,31 @@
+{
+  "title": "SmBoP: Semi-autoregressive Bottom-up Semantic Parsing",
+  "authors": [
+    {
+      "name": "Ohad Rubin",
+      "email": "ohadr@mail.tau.ac.il",
+      "twitter": "@OhadRubin",
+      "affiliation": "Tel Aviv University",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=4p8NquAAAAAJ",
+      "s2_author_page": "https://www.semanticscholar.org/author/Ohad-Rubin/2001128224"
+    }, {
+      "name": "Jonathan Berant",
+      "twitter": "@JonathanBerant",
+      "email": "joberant@cs.tau.ac.il",
+      "affiliation": "Tel Aviv University, AI2",
+      "google_scholar_author_page": "https://scholar.google.com/citations?hl=en&user=xCYHonIAAAAJ",
+      "s2_author_page": "https://www.semanticscholar.org/author/Jonathan-Berant/1750652"
+    }
+  ],
+  "submission_date": "2021-05-08",
+  "github_link": "https://github.com/OhadRubin/SmBop",
+  "paper_link": "https://arxiv.org/abs/2010.12412",
+  "allennlp_version": "2.2.0",
+  "datasets": [
+    {
+      "name": "Spider",
+      "link": "https://yale-lily.github.io/spider"
+    }
+  ],
+  "tags": ["semantic-parsing", "text-to-sql"]
+}
