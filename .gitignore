@@ -4,4 +4,7 @@ __pycache__
 
 # Kubernetes configuration
 .skiff/webapp.yaml
+
+# IntelliJ
 /*.iml
+/.idea/

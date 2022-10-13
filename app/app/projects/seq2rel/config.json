@@ -1,0 +1,48 @@
+{
+  "title": "A sequence-to-sequence approach for document-level relation extraction",
+  "authors": [
+    {
+      "name": "John Giorgi",
+      "twitter": "@johnmgiorgi",
+      "email": "john.giorgi@utoronto.ca",
+      "affiliation": "University of Toronto",
+      "google_scholar_author_page": "https://scholar.google.ca/citations?user=TNFEhK4AAAAJ&hl=en",
+      "s2_author_page": "https://www.semanticscholar.org/author/John-Giorgi/37585306"
+    }, {
+      "name": "Gary Bader",
+      "twitter": "@garybader1",
+      "email": "gary.bader@utoronto.ca",
+      "affiliation": "University of Toronto",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=22M9eisAAAAJ&hl=en"
+    },{
+      "name": "Bo Wang",
+      "twitter": "@BoWang87",
+      "email": "bowang@vectorinstitute.ai",
+      "affiliation": "University of Toronto",
+      "google_scholar_author_page": "https://scholar.google.com/citations?user=37FDILIAAAAJ&hl=en"
+    }
+  ],
+  "submission_date": "2022-04-03",
+  "github_link": "https://github.com/JohnGiorgi/seq2rel",
+  "paper_link": "https://aclanthology.org/2022.bionlp-1.2/",
+  "allennlp_version": "2.9.0",
+  "datasets": [
+    {
+      "name": "CDR",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4860626/"
+    },
+    {
+      "name": "GDA",
+      "link": "https://link.springer.com/chapter/10.1007/978-3-030-17083-7_17"
+    },
+    {
+      "name": "DGM",
+      "link": "https://aclanthology.org/N19-1370/"
+    },
+    {
+      "name": "DocRED",
+      "link": "https://aclanthology.org/P19-1074/"
+    }
+  ],
+  "tags": ["named entity recognition", "coreference resolution", "relation extraction", "seq2seq"]
+}
